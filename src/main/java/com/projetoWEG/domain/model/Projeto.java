@@ -24,25 +24,30 @@ public class Projeto {
    @NotNull
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @Column(name = "id_projeto")
    Long id;
 
    @Valid
    @NotBlank
    @Size(max = 255)
+   @Column(name = "secao_projeto")
    String secao;
 
    @Valid
    @NotBlank
    @Size(max = 100)
+   @Column(name = "nome_projeto")
    String nome;
 
    @Valid
    @NotBlank
    @Size(max = 255)
+   @Column(name = "descricao_projeto")
    String descricao;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Enumerated(EnumType.STRING)
+   @Column(name = "status_projeto")
    StatusProjeto status;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)

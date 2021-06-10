@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -18,30 +15,36 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @AllArgsConstructor
-@Entity
+@Entity(name = "consultores")
+@Embeddable
 public class Consultor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cadastro_consultor")
     Long id;
 
     @Valid
     @NotBlank
     @Size(min = 3)
+    @Column(name = "nome_consultor")
     String nome;
 
     @Valid
     @Email
     @Size(min = 5)
+    @Column(name = "email_consultor")
     String email;
 
     @Valid
     @NotBlank
     @Size(min = 14)
+    @Column(name = "telefone_consultor")
     String telefone;
 
     @Valid
     @NotBlank
+    @Column(name = "skill_consultor")
     String skill;
 
     @Valid
@@ -50,5 +53,5 @@ public class Consultor {
     String limite_horas;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    StatusConsultor Status;
+    StatusConsultor status;
 }

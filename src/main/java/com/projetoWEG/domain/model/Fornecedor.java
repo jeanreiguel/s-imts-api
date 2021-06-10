@@ -19,23 +19,27 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Entity
+@Entity(name = "fornecedores")
 public class Fornecedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_fornecedor")
     Long id;
 
     @Valid
     @Size(min = 3)
+    @Column(name = "nome_fornecedor")
     String nome;
 
     @Valid
     @Email
     @Size(min = 5)
+    @Column(name = "email_fornecedor")
     String email;
 
     @Valid
     @Size(min = 14)
+    @Column(name = "telefone_fornecedor")
     String telefone;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)

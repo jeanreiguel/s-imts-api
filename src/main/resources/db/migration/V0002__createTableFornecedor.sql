@@ -1,12 +1,26 @@
-CREATE TABLE fornecedor (
-    idFornecedor bigint not null auto_increment,
-    nome varchar(60) not null,
-    email varchar(150) not null,
-    telefone varchar(25) not null,
+CREATE TABLE fornecedores (
+    id_fornecedor bigint not null auto_increment,
+    nome_fornecedor varchar(60) not null,
+    email_fornecedor varchar(150) not null,
+    telefone_fornecedor varchar(25) not null,
     inicio_contrato timestamp not null,
-    fim_contrato timestamp not null
+    fim_contrato timestamp,
+    primary key (id_fornecedor)
 );
 
-INSERT INTO fornecedor VALUES (
-
+INSERT INTO fornecedores VALUES (
+    null,
+    "IBTECH",
+    "ibtech_business@gmail.com",
+    "55+ (47)0000-0000",
+    SYSDATE(),
+    null
+);
+INSERT INTO fornecedores VALUES (
+    null,
+    "DEVEXP",
+    "devexp_business@gmail.com",
+    "55+ (47)0000-0000",
+    SYSDATE(),
+    null
 );
