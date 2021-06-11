@@ -7,21 +7,21 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.sql.Time;
 
 @Getter
 @Setter
-@Embeddable
 public class Alocacao {
 
     @Valid
     @NotNull
     @ManyToOne
-    Consultor consultor;
+    Long id_consultor;
 
     @Valid
     @NotNull
     @ManyToOne
-    Projeto projeto;
+    Long id_projeto;
 
     @Valid
     @NotBlank

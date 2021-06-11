@@ -24,16 +24,24 @@ public class ConsultorController {
         return consultorService.listarTodos();
     }
 
-    @GetMapping("/{ID}")
+    @GetMapping("/{id}")
     public ResponseEntity<Consultor> listarConsultorId(@PathVariable Long id) {
         return consultorService.listarId(id);
+    }
+    @GetMapping("/id/{id}")
+    public Consultor listarConsultorPorId(@PathVariable Long id) {
+        return consultorService.buscarConsultor(id);
     }
     @GetMapping("/nome/{nome}")
     public ResponseEntity<Consultor> listarConsultorNome(@PathVariable String nome) {
         return consultorService.listarNome(nome);
     }
+    @GetMapping("/nome/containing/{contain}")
+    public List<Consultor> listarConsultorContaining(@PathVariable String contain) {
+        return consultorService.listarContaining(contain);
+    }
     @GetMapping("status/{status}")
-    public List<Consultor> listarConsultorStatus(@PathVariable StatusConsultor status) {
+    public List<Consultor> listarConsultorStatus(@PathVariable String status) {
         return consultorService.listarStatus(status);
     }
 }

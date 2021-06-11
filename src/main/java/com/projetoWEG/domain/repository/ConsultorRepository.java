@@ -12,10 +12,7 @@ import java.util.Optional;
 
 @Repository
 public interface ConsultorRepository extends JpaRepository<Consultor, Long> {
-    Optional<Consultor> findById(String id);
-
-    Optional<Consultor> findById(Long id);
-    Optional<Consultor> findByConsultorNome(String name);
-    List<Consultor> findByConsultorStatus(StatusConsultor status);
-    List<Consultor> findByContaining(String contain);
+    Optional<Consultor> findByNome(String name);
+    List<Consultor> findByStatus(String status);
+    List<Consultor> findByNomeContaining(String contain);
 }

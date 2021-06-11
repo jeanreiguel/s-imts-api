@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Entity
-@Table(name = "projetos")
+@Entity(name = "projetos")
 public class Projeto {
 
    @Valid
@@ -51,10 +50,10 @@ public class Projeto {
    StatusProjeto status;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   LocalDateTime data_inicio;
+   String data_inicio;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   LocalDateTime data_fim;
+   String data_fim;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    int horas_apontadas;

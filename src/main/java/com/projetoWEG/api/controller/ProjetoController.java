@@ -25,7 +25,7 @@ public class ProjetoController {
         return projetoService.listarTodos();
     }
 
-    @GetMapping("/{ID}")
+    @GetMapping("/{id}")
     public ResponseEntity<Projeto> listarProjetoId(@PathVariable Long id) {
         return projetoService.listarId(id);
     }
@@ -38,8 +38,12 @@ public class ProjetoController {
         return projetoService.listarSecao(secao);
     }
 
-    @GetMapping("/status/{ID}")
+    @GetMapping("/status/{status}")
     public List<Projeto> listarProjetosStatus(@PathVariable StatusProjeto status) {
         return projetoService.listarStatus(status);
+    }
+    @GetMapping("/nome/containing/{contain}")
+    public List<Projeto> listarProjetosContaining(@PathVariable String contain) {
+        return projetoService.listarContaining(contain);
     }
 }

@@ -27,13 +27,16 @@ public class ConsultorService {
                 .orElse(ResponseEntity.notFound().build());
     }
     public ResponseEntity<Consultor> listarNome(String nome) {
-        return consultorRepository.findByConsultorNome(nome).map(ResponseEntity::ok)
+        return consultorRepository.findByNome(nome).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
     public List<Consultor> listarContaining(String contain) {
-        return consultorRepository.findByContaining(contain);
+        return consultorRepository.findByNomeContaining(contain);
     }
-    public List<Consultor> listarStatus(StatusConsultor status) {
-        return consultorRepository.findByConsultorStatus(status);
+    public Consultor buscarConsultor(Long id) {
+        return consultorRepository.findById(id).orElseThrow(() -> new CasoException("Consultor Inexistente."));
+    }
+    public List<Consultor> listarStatus(String status) {
+        return consultorRepository.findByStatus(status);
     }
 }

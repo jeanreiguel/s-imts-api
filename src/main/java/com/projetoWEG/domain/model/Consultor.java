@@ -1,9 +1,8 @@
 package com.projetoWEG.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -15,6 +14,8 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name = "consultores")
 @Embeddable
 public class Consultor {
@@ -53,5 +54,5 @@ public class Consultor {
     String limite_horas;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    StatusConsultor status;
+    String status;
 }

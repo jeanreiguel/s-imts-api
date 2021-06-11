@@ -1,6 +1,5 @@
 package com.projetoWEG.domain.service;
 
-import com.projetoWEG.domain.exception.CasoException;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.model.StatusProjeto;
 import com.projetoWEG.domain.repository.ProjetoRepository;
@@ -9,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -26,11 +24,15 @@ public class ProjetoService {
                 .orElse(ResponseEntity.notFound().build());
     }
     public ResponseEntity<Projeto> listarNome(String nome) {
-        return projetoRepository.findByProjetoNome(nome).map(ResponseEntity::ok)
+        return projetoRepository.findByNome(nome).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
     public List<Projeto> listarSecao(String secao) {
-        return projetoRepository.findBySecaoName(secao);
+        return projetoRepository.findBySecao(secao);
+    }
+
+    public List<Projeto> listarContaining(String contain) {
+        return projetoRepository.findByNomeContaining(contain);
     }
     public List<Projeto> listarStatus(StatusProjeto status) {
         return projetoRepository.findByStatus(status);
