@@ -3,7 +3,9 @@ CREATE TABLE alocacao (
     id_projeto bigint not null,
     skill varchar(255) not null,
     horas_total int not null,
-    foreign key (id_consultor) references consultor(cadastro_consultor)
+    foreign key (id_consultor) references consultores(cadastro_consultor),
+    foreign key (id_projeto) references projetos(id_projeto)
+
 );
 
 INSERT INTO alocacao VALUES(

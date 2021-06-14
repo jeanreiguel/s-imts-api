@@ -19,10 +19,15 @@ public class ApontamentosService {
     private ProjetoService projetoService;
     private ApontamentosRepository apontamentosRepository;
 
-    public List<Apontamento> listarApontamentosConsultor(Long id) {
-        Consultor consultor = consultorService.buscarConsultor(id);
-        Alocacao alocacao = new Alocacao();
-        alocacao.setId_consultor(consultor.getId());
-        return apontamentosRepository.findByAlocacaoConsultorId(alocacao.getId_consultor());
+    public Apontamento inserir(Apontamento apontamento) {
+        return apontamentosRepository.save(apontamento);
+    }
+    public List<Apontamento> listarTodos() {
+        return apontamentosRepository.findAll();
+    }
+
+    public ResponseEntity<Apontamento> listarApontamentosConsultor(Long id) {
+        return apontamentosRepository.findById(id).map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }

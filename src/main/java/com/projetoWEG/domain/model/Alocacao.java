@@ -1,6 +1,8 @@
 package com.projetoWEG.domain.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,19 +11,20 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.sql.Time;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+@Embeddable
 public class Alocacao {
 
     @Valid
     @NotNull
-    @ManyToOne
-    Long id_consultor;
+    long id_consultor;
 
     @Valid
     @NotNull
-    @ManyToOne
-    Long id_projeto;
+    long id_projeto;
 
     @Valid
     @NotBlank
@@ -30,4 +33,5 @@ public class Alocacao {
     @Valid
     @NotNull
     int horas_total;
+
 }

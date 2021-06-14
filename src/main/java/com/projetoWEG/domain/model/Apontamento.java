@@ -18,6 +18,7 @@ import javax.validation.constraints.NotNull;
 public class Apontamento {
 
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 

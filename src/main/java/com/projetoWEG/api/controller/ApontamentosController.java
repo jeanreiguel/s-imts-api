@@ -3,10 +3,11 @@ package com.projetoWEG.api.controller;
 import com.projetoWEG.domain.model.Apontamento;
 import com.projetoWEG.domain.service.ApontamentosService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @AllArgsConstructor
@@ -16,8 +17,17 @@ public class ApontamentosController {
 
     private ApontamentosService apontamentosService;
 
+    @PostMapping("inserir")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Apontamento inserirApontamento(@Valid @RequestBody Apontamento apontamento) {
+        return apontamentosService.inserir(apontamento);
+    }
+    @GetMapping
+    public List<Apontamento> listarApontamentos() {
+        return apontamentosService.listarTodos();
+    }
     @GetMapping("/{id}")
-    public List<Apontamento> listarApontamentosId(Long id) {
+    public ResponseEntity<Apontamento> listarApontamentosId(Long id) {
     return apontamentosService.listarApontamentosConsultor(id);
     }
 }
