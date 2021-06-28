@@ -31,17 +31,9 @@ public class Consultor {
     @Column(name = "nome_consultor")
     String nome;
 
-    @Valid
-    @Email
-    @Size(min = 5)
-    @Column(name = "email_consultor")
-    String email;
-
-    @Valid
-    @NotBlank
-    @Size(min = 14)
-    @Column(name = "telefone_consultor")
-    String telefone;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    Usuario usuario;
 
     @Valid
     @NotBlank

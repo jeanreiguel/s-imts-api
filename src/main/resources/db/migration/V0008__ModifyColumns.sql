@@ -1,0 +1,1 @@
+ALTER TABLE consultores ADD COLUMN user_id bigint NOT NULL;

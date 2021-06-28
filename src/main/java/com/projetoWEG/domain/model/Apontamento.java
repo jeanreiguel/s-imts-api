@@ -20,6 +20,7 @@ public class Apontamento {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+            @Column(name = "id_apontamento")
     Long id;
 
     @Valid

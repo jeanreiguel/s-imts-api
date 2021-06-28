@@ -26,6 +26,7 @@ public class ApontamentosController {
     public List<Apontamento> listarApontamentos() {
         return apontamentosService.listarTodos();
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<Apontamento> listarApontamentosId(Long id) {
     return apontamentosService.listarApontamentosConsultor(id);
