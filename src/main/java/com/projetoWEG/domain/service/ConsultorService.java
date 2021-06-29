@@ -33,9 +33,6 @@ public class ConsultorService {
     public List<Consultor> listarContaining(String contain) {
         return consultorRepository.findByNomeContaining(contain);
     }
-    public Consultor buscarConsultor(Long id) {
-        return consultorRepository.findById(id).orElseThrow(() -> new CasoException("Consultor Inexistente."));
-    }
     public List<Consultor> listarStatus(String status) {
         return consultorRepository.findByStatus(status);
     }

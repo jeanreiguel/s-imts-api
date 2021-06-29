@@ -10,6 +10,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Getter
 @Setter
@@ -47,4 +48,7 @@ public class Consultor {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     String status;
+
+    @ManyToMany
+    List<Projeto> projetos;
 }

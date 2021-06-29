@@ -7,10 +7,7 @@ import com.projetoWEG.domain.model.StatusProjeto;
 import com.projetoWEG.domain.service.ConsultorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @AllArgsConstructor
@@ -19,6 +16,7 @@ import java.util.List;
 public class ConsultorController {
 
     private ConsultorService consultorService;
+
     @GetMapping
     public List<Consultor> listarConsultores() {
         return consultorService.listarTodos();
@@ -28,11 +26,7 @@ public class ConsultorController {
     public ResponseEntity<Consultor> listarConsultorId(@PathVariable Long id) {
         return consultorService.listarId(id);
     }
-    @GetMapping("/id/{id}")
-    public Consultor listarConsultorPorId(@PathVariable Long id) {
-        return consultorService.buscarConsultor(id);
-    }
-    @GetMapping("/nome/{nome}")
+   @GetMapping("/nome/{nome}")
     public ResponseEntity<Consultor> listarConsultorNome(@PathVariable String nome) {
         return consultorService.listarNome(nome);
     }

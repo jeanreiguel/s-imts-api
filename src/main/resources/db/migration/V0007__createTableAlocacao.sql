@@ -8,6 +8,7 @@ CREATE TABLE alocacao (
 
 );
 
+
 INSERT INTO alocacao VALUES(
     1,
     1,

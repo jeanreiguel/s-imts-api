@@ -31,16 +31,9 @@ public class Fornecedor {
     @Column(name = "nome_fornecedor")
     String nome;
 
-    @Valid
-    @Email
-    @Size(min = 5)
-    @Column(name = "email_fornecedor")
-    String email;
-
-    @Valid
-    @Size(min = 14)
-    @Column(name = "telefone_fornecedor")
-    String telefone;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    Usuario usuario;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     LocalDateTime inicio_contrato;

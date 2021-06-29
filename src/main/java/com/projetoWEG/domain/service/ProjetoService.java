@@ -30,7 +30,6 @@ public class ProjetoService {
     public List<Projeto> listarSecao(String secao) {
         return projetoRepository.findBySecao(secao);
     }
-
     public List<Projeto> listarContaining(String contain) {
         return projetoRepository.findByNomeContaining(contain);
     }

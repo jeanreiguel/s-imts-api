@@ -10,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -43,6 +44,12 @@ public class Projeto {
    @Size(max = 255)
    @Column(name = "descricao_projeto")
    String descricao;
+
+   @ManyToMany
+   @JoinTable(name = "alocacao",
+           joinColumns = @JoinColumn(name = "id_projeto",referencedColumnName = "id_projeto"),
+           inverseJoinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"))
+   List<Consultor> consultores;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Enumerated(EnumType.STRING)
