@@ -46,7 +46,7 @@ public class Projeto {
    String descricao;
 
    @ManyToMany
-   @JoinTable(name = "alocacao",
+   @JoinTable(name = "consultor_alocacao",
            joinColumns = @JoinColumn(name = "id_projeto",referencedColumnName = "id_projeto"),
            inverseJoinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"))
    List<Consultor> consultores;

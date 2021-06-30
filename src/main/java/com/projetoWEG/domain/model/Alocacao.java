@@ -9,22 +9,23 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.sql.Time;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Embeddable
+@Entity(name = "consultores_alocacao")
 public class Alocacao {
 
+    @Id
     @Valid
     @NotNull
-    long id_consultor;
+    Long id_consultor;
 
     @Valid
     @NotNull
-    long id_projeto;
+    Long id_projeto;
 
     @Valid
     @NotBlank

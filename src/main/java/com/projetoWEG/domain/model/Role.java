@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
@@ -16,6 +13,7 @@ import java.util.List;
 public class Role implements GrantedAuthority {
 
     @Id
+    @Column(name = "nome_role")
     private String nomeRole;
 
     @ManyToMany

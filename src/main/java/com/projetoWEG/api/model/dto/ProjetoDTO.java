@@ -1,23 +1,16 @@
 package com.projetoWEG.api.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.projetoWEG.domain.model.Consultor;
 import com.projetoWEG.domain.model.StatusProjeto;
-import lombok.*;
-import lombok.experimental.FieldDefaults;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
+import javax.persistence.Column;
 import java.util.List;
 
 @Getter
 @Setter
 
-public class ProjetoFornecedorDTO {
+public class ProjetoDTO {
 
     @Column(name = "id_projeto")
     Long id;
@@ -29,8 +22,6 @@ public class ProjetoFornecedorDTO {
 
     @Column(name = "descricao_projeto")
     String descricao;
-
-    List<ConsultorDTO> consultores;
 
     @Column(name = "status_projeto")
     StatusProjeto status;

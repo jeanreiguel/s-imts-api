@@ -1,6 +1,6 @@
 package com.projetoWEG.domain.service;
 
-import com.projetoWEG.domain.model.Alocacao;
+//import com.projetoWEG.domain.model.Alocacao;
 import com.projetoWEG.domain.model.Apontamento;
 import com.projetoWEG.domain.model.Consultor;
 import com.projetoWEG.domain.model.Projeto;
@@ -22,6 +22,7 @@ public class ApontamentosService {
     public Apontamento inserir(Apontamento apontamento) {
         return apontamentosRepository.save(apontamento);
     }
+
     public List<Apontamento> listarTodos() {
         return apontamentosRepository.findAll();
     }

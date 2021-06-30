@@ -1,5 +1,7 @@
 package com.projetoWEG.api.controller;
 
+import com.projetoWEG.api.assembler.ProjetoAssembler;
+import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.model.StatusProjeto;
 import com.projetoWEG.domain.repository.ProjetoRepository;
@@ -19,10 +21,11 @@ import java.util.List;
 public class ProjetoController {
 
     private ProjetoService projetoService;
+    private ProjetoAssembler projetoAssembler;
 
     @GetMapping
-    public List<Projeto> listarProjetos() {
-        return projetoService.listarTodos();
+    public List<ProjetoFornecedorDTO> listarProjetos() {
+        return projetoAssembler.toFornecedorCollection(projetoService.listarTodos());
     }
 
     @GetMapping("/{id}")

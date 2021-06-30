@@ -1,5 +1,6 @@
 package com.projetoWEG.domain.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,11 +21,12 @@ public class Apontamento {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-            @Column(name = "id_apontamento")
+    @Column(name = "id_apontamento")
     Long id;
 
     @Valid
     @NotNull
+    @ManyToOne
     @Embedded
     Alocacao alocacao;
 

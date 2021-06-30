@@ -18,7 +18,6 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name = "consultores")
-@Embeddable
 public class Consultor {
 
     @Id
@@ -50,5 +49,14 @@ public class Consultor {
     String status;
 
     @ManyToMany
+    @JoinTable(name = "consultor_alocacao",
+            joinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"),
+            inverseJoinColumns = @JoinColumn(name = "id_projeto",referencedColumnName = "id_projeto"))
+    List<Projeto> projetos;
+
+    @ManyToMany
+    @JoinTable(name = "consultor_alocacao",
+            joinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"),
+            inverseJoinColumns = @JoinColumn(name = "id_projeto",referencedColumnName = "id_projeto"))
     List<Projeto> projetos;
 }
