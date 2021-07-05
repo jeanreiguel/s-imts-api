@@ -1,5 +1,6 @@
 package com.projetoWEG.domain.service;
 
+import com.projetoWEG.api.assembler.ProjetoAssembler;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.model.StatusProjeto;
 import com.projetoWEG.domain.repository.ProjetoRepository;
@@ -14,6 +15,7 @@ import java.util.List;
 public class ProjetoService {
 
     private ProjetoRepository projetoRepository;
+    private ProjetoAssembler projetoAssembler;
 
     public List<Projeto> listarTodos() {
         return projetoRepository.findAll();

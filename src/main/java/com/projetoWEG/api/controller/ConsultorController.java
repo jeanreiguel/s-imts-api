@@ -1,5 +1,7 @@
 package com.projetoWEG.api.controller;
 
+import com.projetoWEG.api.assembler.ConsultorAssembler;
+import com.projetoWEG.api.model.dto.ConsultorDTO;
 import com.projetoWEG.domain.model.Consultor;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.model.StatusConsultor;
@@ -16,10 +18,10 @@ import java.util.List;
 public class ConsultorController {
 
     private ConsultorService consultorService;
-
+    private ConsultorAssembler consultorAssembler;
     @GetMapping
-    public List<Consultor> listarConsultores() {
-        return consultorService.listarTodos();
+    public List<ConsultorDTO> listarConsultores() {
+        return consultorAssembler.toFornecedorCollection(consultorService.listarTodos());
     }
 
     @GetMapping("/{id}")

@@ -1,6 +1,8 @@
 package com.projetoWEG.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.projetoWEG.api.model.dto.ProjetoDTO;
+import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -55,8 +57,8 @@ public class Consultor {
     List<Projeto> projetos;
 
     @ManyToMany
-    @JoinTable(name = "consultor_alocacao",
-            joinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"),
-            inverseJoinColumns = @JoinColumn(name = "id_projeto",referencedColumnName = "id_projeto"))
-    List<Projeto> projetos;
+    @JoinTable(name = "apontamentos",
+            joinColumns = @JoinColumn(name = "alocacao_id_consultor",referencedColumnName = "cadastro_consultor"),
+            inverseJoinColumns = @JoinColumn(name = "id_apontamento",referencedColumnName = "id_apontamento"))
+    List<Apontamento> apontamentos;
 }

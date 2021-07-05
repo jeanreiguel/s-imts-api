@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface AlocacaoRepository extends JpaRepository<Alocacao, Long> {
-    List<Consultor> findById_consultor(Long id);
+    List<Consultor> findByidConsultor(Long idConsultor);
 }

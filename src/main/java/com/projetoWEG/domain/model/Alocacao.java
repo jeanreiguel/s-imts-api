@@ -15,17 +15,19 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Embeddable
-@Entity(name = "consultores_alocacao")
+@Entity(name = "consultor_alocacao")
 public class Alocacao {
 
     @Id
     @Valid
     @NotNull
-    Long id_consultor;
+    @Column(name = "id_consultor")
+    Long idConsultor;
 
     @Valid
     @NotNull
-    Long id_projeto;
+    @Column(name = "id_projeto")
+    Long idProjeto;
 
     @Valid
     @NotBlank
