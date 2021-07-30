@@ -8,9 +8,7 @@ CREATE TABLE apontamentos (
     horas_trabalhadas int,
     descricao varchar(255) not null,
     situacao_apontamento varchar(9) not null,
-    primary key (id_apontamento),
-    FOREIGN KEY (alocacao_id_consultor) REFERENCES alocacao(id_consultor),
-    FOREIGN KEY (alocacao_id_projeto) REFERENCES alocacao(id_consultor)
+    primary key (id_apontamento)
 );
 
 INSERT INTO apontamentos values (

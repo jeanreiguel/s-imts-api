@@ -5,6 +5,7 @@ CREATE TABLE consultor_alocacao (
     horas_total int not null,
     foreign key (id_consultor) references consultores(cadastro_consultor),
     foreign key (id_projeto) references projetos(id_projeto)
+
 );
 
 
