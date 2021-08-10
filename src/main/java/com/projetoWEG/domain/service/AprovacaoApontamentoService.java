@@ -1,4 +1,2 @@
-package com.projetoWEG.domain.service;
-
-public class AprovacaoApontamentoService {
+package com.projetoWEG.domain.service;public class AprovacaoApontamentoService {
 }
