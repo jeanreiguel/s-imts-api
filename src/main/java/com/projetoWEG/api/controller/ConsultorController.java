@@ -40,6 +40,7 @@ public class ConsultorController {
     public List<Consultor> listarConsultorStatus(@PathVariable String status) {
         return consultorService.listarStatus(status);
     }
+
 //    @GetMapping("alocacoes/{id}")
 //    public List<Consultor> listar
 }

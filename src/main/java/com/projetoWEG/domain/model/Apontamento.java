@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity(name = "apontamentos")
 @AllArgsConstructor
@@ -29,6 +30,10 @@ public class Apontamento {
     @ManyToOne
     @Embedded
     Alocacao alocacao;
+
+    @Valid
+    @NotNull
+    Date data;
 
     @Valid
     @NotNull

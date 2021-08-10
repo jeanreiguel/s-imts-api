@@ -2,6 +2,7 @@ package com.projetoWEG.domain.service;
 
 //import com.projetoWEG.domain.model.Alocacao;
 import com.projetoWEG.domain.model.Apontamento;
+import com.projetoWEG.domain.model.Aprovacao;
 import com.projetoWEG.domain.model.Consultor;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
@@ -31,4 +32,5 @@ public class ApontamentosService {
         return apontamentosRepository.findById(id).map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
 }
