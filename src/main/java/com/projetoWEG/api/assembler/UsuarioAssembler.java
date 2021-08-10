@@ -1,6 +1,7 @@
 package com.projetoWEG.api.assembler;
 
 import com.projetoWEG.api.model.dto.UsuarioDTO;
+import com.projetoWEG.api.model.input.UsuarioInputDTO;
 import com.projetoWEG.domain.model.Usuario;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
