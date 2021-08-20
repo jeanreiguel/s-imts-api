@@ -17,11 +17,6 @@ public class ApontamentosController {
 
     private ApontamentosService apontamentosService;
 
-    @PostMapping("inserir")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Apontamento inserirApontamento(@Valid @RequestBody Apontamento apontamento) {
-        return apontamentosService.inserir(apontamento);
-    }
     @GetMapping
     public List<Apontamento> listarApontamentos() {
         return apontamentosService.listarTodos();

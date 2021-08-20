@@ -32,10 +32,12 @@ public class ProjetoController {
     public ResponseEntity<Projeto> listarProjetoId(@PathVariable Long id) {
         return projetoService.listarId(id);
     }
+
     @GetMapping("/nome/{nome}")
     public ResponseEntity<Projeto> listarProjetoNome(@PathVariable String nome) {
         return projetoService.listarNome(nome);
     }
+
     @GetMapping("/secao/{secao}")
     public List<Projeto> listarProjetosSecao(@PathVariable String secao) {
         return projetoService.listarSecao(secao);
@@ -45,6 +47,7 @@ public class ProjetoController {
     public List<Projeto> listarProjetosStatus(@PathVariable StatusProjeto status) {
         return projetoService.listarStatus(status);
     }
+
     @GetMapping("/nome/containing/{contain}")
     public List<Projeto> listarProjetosContaining(@PathVariable String contain) {
         return projetoService.listarContaining(contain);

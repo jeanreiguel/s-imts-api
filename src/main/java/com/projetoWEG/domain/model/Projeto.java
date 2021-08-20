@@ -68,5 +68,4 @@ public class Projeto {
    @Valid
    @NotNull
    int horas_total;
-
 }
