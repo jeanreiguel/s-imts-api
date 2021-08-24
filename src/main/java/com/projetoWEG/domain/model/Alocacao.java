@@ -21,12 +21,10 @@ public class Alocacao {
     @Id
     @Valid
     @NotNull
-    @Column(name = "id_consultor")
     Long idConsultor;
 
     @Valid
     @NotNull
-    @Column(name = "id_projeto")
     Long idProjeto;
 
     @Valid
@@ -35,6 +33,6 @@ public class Alocacao {
 
     @Valid
     @NotNull
-    int horas_total;
+    int horasTotal;
 
 }

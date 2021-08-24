@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
 
 //@Entity
 @AllArgsConstructor
@@ -31,17 +32,15 @@ public class Aprovacao {
 
     @Valid
     @NotNull
-    String nome_fornecedor;
+    String nomeFornecedor;
+
+    List<Apontamento> apontamento;
 
     @Valid
     @NotNull
-    Apontamento apontamento;
+    double valorHora;
 
     @Valid
     @NotNull
-    double valor_hora;
-
-    @Valid
-    @NotNull
-    int horas_aprovadas;
+    int horasAprovadas;
 }

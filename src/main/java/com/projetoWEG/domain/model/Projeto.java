@@ -57,13 +57,13 @@ public class Projeto {
    StatusProjeto status;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   String data_inicio;
+   String dataInicio;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    String data_fim;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   int horas_apontadas;
+   int horasApontadas;
 
    @Valid
    @NotNull

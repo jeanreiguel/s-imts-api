@@ -18,20 +18,20 @@ public class Requisicao {
 
     @Valid
     @NotBlank
-    String nome_consultor;
+    String nomeConsultor;
 
     @Valid
     @NotBlank
-    String nome_responsavel;
+    String nomeResponsavel;
 
     @Valid
     @NotBlank
     String descricao;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    LocalDateTime data_requisição;
+    LocalDateTime dataRequisicao;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    LocalDateTime data_apontamento;
+    LocalDateTime dataApontamento;
 
 }

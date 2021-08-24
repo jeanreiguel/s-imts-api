@@ -36,9 +36,9 @@ public class Fornecedor {
     Usuario usuario;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    LocalDateTime inicio_contrato;
+    LocalDateTime inicioContrato;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    LocalDateTime fim_contrato;
+    LocalDateTime fimContrato;
 
 }

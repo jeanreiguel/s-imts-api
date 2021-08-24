@@ -37,7 +37,7 @@ public class Apontamento {
 
     @Valid
     @NotNull
-    int horas_trabalhadas;
+    int horasTrabalhadas;
 
     @Valid
     @NotBlank

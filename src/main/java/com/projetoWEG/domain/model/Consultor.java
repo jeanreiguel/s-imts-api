@@ -45,7 +45,7 @@ public class Consultor {
     @Valid
     @NotNull
     @Size(min = 1, max = 4)
-    String limite_horas;
+    String limiteHoras;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     String status;
