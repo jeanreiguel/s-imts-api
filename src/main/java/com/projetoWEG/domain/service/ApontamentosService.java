@@ -20,10 +20,6 @@ public class ApontamentosService {
     private ProjetoService projetoService;
     private ApontamentosRepository apontamentosRepository;
 
-    public Apontamento inserir(Apontamento apontamento) {
-        return apontamentosRepository.save(apontamento);
-    }
-
     public List<Apontamento> listarTodos() {
         return apontamentosRepository.findAll();
     }
