@@ -13,6 +13,7 @@ import java.util.List;
 public class Role implements GrantedAuthority {
 
     @Id
+    @Column(name = "nome_role")
     private String nomeRole;
 
     @ManyToMany

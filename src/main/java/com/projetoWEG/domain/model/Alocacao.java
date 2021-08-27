@@ -19,20 +19,27 @@ import javax.validation.constraints.NotNull;
 public class Alocacao {
 
     @Id
-    @Valid
-    @NotNull
-    Long idConsultor;
+    private Long id;
 
     @Valid
     @NotNull
-    Long idProjeto;
+    @JoinColumn(name = "id_consultor")
+    @ManyToOne
+    private Consultor idConsultor;
+
+    @Valid
+    @NotNull
+    @JoinColumn(name = "id_projeto")
+    @ManyToOne
+    private Projeto idProjeto;
 
     @Valid
     @NotBlank
-    String skill;
+    private String skill;
 
     @Valid
     @NotNull
-    int horasTotal;
+    @Column(name = "horas_total")
+    private int horasTotal;
 
 }

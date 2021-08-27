@@ -63,9 +63,11 @@ public class Projeto {
    String data_fim;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+   @Column(name = "horas_apontadas")
    int horasApontadas;
 
    @Valid
    @NotNull
-   int horas_total;
+   @Column(name = "horas_total")
+   int horasTotal;
 }

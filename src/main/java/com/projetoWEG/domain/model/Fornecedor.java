@@ -36,9 +36,11 @@ public class Fornecedor {
     Usuario usuario;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @Column(name = "inicio_contrato")
     LocalDateTime inicioContrato;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @Column(name = "fim_contrato")
     LocalDateTime fimContrato;
 
 }

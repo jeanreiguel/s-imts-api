@@ -12,36 +12,37 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-@Entity(name = "apontamentos")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Entity(name = "apontamentos")
 public class Apontamento {
 
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_apontamento")
-    Long id;
+    private Long id;
 
     @Valid
     @NotNull
     @ManyToOne
     @Embedded
-    Alocacao alocacao;
+    private Alocacao alocacao;
 
     @Valid
     @NotNull
-    Date data;
+    private Date data;
 
     @Valid
     @NotNull
-    int horasTrabalhadas;
+    private int horasTrabalhadas;
 
     @Valid
     @NotBlank
-    String descricao;
+    private String descricao;
 
-
+    @NotNull
+    private String situacaoApontamento;
 }
