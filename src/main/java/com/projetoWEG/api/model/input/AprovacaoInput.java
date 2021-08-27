@@ -1,27 +1,38 @@
 package com.projetoWEG.api.model.input;
 
 import com.projetoWEG.domain.model.Apontamento;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class AprovacaoInput {
 
-    @Valid
-    @NotNull
-    Date data;
+    private Long id;
+    
+    private Date data;
 
-    @Valid
-    @NotBlank
-    String nomeFornecedor;
+    private String nomeFornecedor;
 
-    List<Apontamento> apontamento;
+    private String nomeResponsavel;
 
-    @Valid
-    @NotNull
-    double valorHora;
+    private int horasAprovadas;
+
+    private double valorHora;
+
+    private List<ApontamentoInput> apontamentos = new ArrayList<>();
 
 }
