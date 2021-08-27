@@ -20,9 +20,6 @@ public class ConsultorDTO {
 
     Usuario usuario;
 
-    List<ProjetoDTO> projetos;
-    List<Apontamento> apontamentos;
-
     @Column(name = "skill_consultor")
     String skill;
 

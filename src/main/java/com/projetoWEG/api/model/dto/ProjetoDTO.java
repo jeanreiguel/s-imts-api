@@ -26,7 +26,6 @@ public class ProjetoDTO {
     @Column(name = "status_projeto")
     StatusProjeto status;
 
-
     String data_inicio;
 
     String data_fim;
