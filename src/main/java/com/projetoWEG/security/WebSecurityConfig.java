@@ -37,7 +37,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/consultores/status/{status}",
             "/consultores/containing/{contain}",
             "/apontamentos",
-            "/apontamentos/{id}"
+            "/apontamentos/{id}",
+            "/aprovacao"
     };
 
     @Override
