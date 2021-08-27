@@ -1,9 +1,9 @@
 CREATE TABLE apontamentos (
     id_apontamento bigint not null auto_increment,
+    alocacao_id bigint not null,
     alocacao_id_consultor bigint not null,
     alocacao_id_projeto bigint not null,
-    alocacao_skill varchar(255)
-     not null,
+    alocacao_skill varchar(255) not null,
     alocacao_horas_total int not null,
     data date not null,
     horas_trabalhadas int,
@@ -14,6 +14,7 @@ CREATE TABLE apontamentos (
 
 INSERT INTO apontamentos values (
     null,
+    1,
     1,
     1,
     "Desenvolvimento WEB",

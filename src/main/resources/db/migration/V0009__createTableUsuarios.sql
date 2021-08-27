@@ -1,14 +1,14 @@
 CREATE TABLE usuario(
     id bigint not null auto_increment,
     email varchar(100) not null,
-    senha varchar(60) not null,
+    senha varchar(255) not null,
     primary key(id)
 );
 
 INSERT INTO USUARIO (id, email, senha) VALUES
-(null, 'jean@gmail.com','123456'),
-(null,'mabisousa@gmail.com','123456'),
-(null,'robertapolez@gmail.com','123456');
+(null, 'jean@gmail.com','$2a$10$xnpzDKvU7zyGvrZVmZ6TVuc5QEpuEmLiTcsg3IVj6EKMEm3tb3vba'),
+(null,'mabisousa@gmail.com','$2a$10$xnpzDKvU7zyGvrZVmZ6TVuc5QEpuEmLiTcsg3IVj6EKMEm3tb3vba'),
+(null,'robertapolez@gmail.com','$2a$10$xnpzDKvU7zyGvrZVmZ6TVuc5QEpuEmLiTcsg3IVj6EKMEm3tb3vba');
 
 CREATE TABLE role(
     nome_role varchar(45) not null,
