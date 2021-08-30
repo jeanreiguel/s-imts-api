@@ -13,6 +13,8 @@ public class ApontamentoDTO {
 
     private Date data;
 
+    private AlocacaoDTO alocacao;
+
     private int horasTrabalhadas;
 
     private String descricao;
