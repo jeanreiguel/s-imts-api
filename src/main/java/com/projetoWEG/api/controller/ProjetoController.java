@@ -28,27 +28,27 @@ public class ProjetoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Projeto> listarProjetoId(@PathVariable Long id) {
+    public ResponseEntity<ProjetoFornecedorDTO> listarProjetoId(@PathVariable Long id) {
         return projetoService.listarId(id);
     }
 
     @GetMapping("/nome/{nome}")
-    public ResponseEntity<Projeto> listarProjetoNome(@PathVariable String nome) {
+    public ResponseEntity<ProjetoFornecedorDTO> listarProjetoNome(@PathVariable String nome) {
         return projetoService.listarNome(nome);
     }
 
     @GetMapping("/secao/{secao}")
-    public List<Projeto> listarProjetosSecao(@PathVariable String secao) {
-        return projetoService.listarSecao(secao);
+    public List<ProjetoFornecedorDTO> listarProjetosSecao(@PathVariable String secao) {
+        return projetoAssembler.toFornecedorCollection(projetoService.listarSecao(secao));
     }
 
     @GetMapping("/status/{status}")
-    public List<Projeto> listarProjetosStatus(@PathVariable StatusProjeto status) {
-        return projetoService.listarStatus(status);
+    public List<ProjetoFornecedorDTO> listarProjetosStatus(@PathVariable StatusProjeto status) {
+        return projetoAssembler.toFornecedorCollection(projetoService.listarStatus(status));
     }
 
     @GetMapping("/nome/containing/{contain}")
-    public List<Projeto> listarProjetosContaining(@PathVariable String contain) {
-        return projetoService.listarContaining(contain);
+    public List<ProjetoFornecedorDTO> listarProjetosContaining(@PathVariable String contain) {
+        return projetoAssembler.toFornecedorCollection(projetoService.listarContaining(contain));
     }
 }
