@@ -1,10 +1,8 @@
 package com.projetoWEG.domain.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -16,6 +14,8 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
+@FieldDefaults(level = AccessLevel.PRIVATE)
+
 @Entity(name = "apontamentos")
 public class Apontamento {
 
@@ -23,26 +23,26 @@ public class Apontamento {
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_apontamento")
-    private Long id;
+     Long id;
 
     @Valid
     @NotNull
     @ManyToOne
     @Embedded
-    private Alocacao alocacao;
+    Alocacao alocacao;
 
     @Valid
     @NotNull
-    private Date data;
+     Date data;
 
     @Valid
     @NotNull
-    private int horasTrabalhadas;
+    int horasTrabalhadas;
 
     @Valid
     @NotBlank
-    private String descricao;
+    String descricao;
 
     @NotNull
-    private String situacaoApontamento;
+    String situacaoApontamento;
 }

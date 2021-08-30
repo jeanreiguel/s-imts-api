@@ -2,11 +2,7 @@ package com.projetoWEG.api.controller;
 
 import com.projetoWEG.api.model.dto.AprovacaoDTO;
 import com.projetoWEG.api.model.input.AprovacaoInput;
-import com.projetoWEG.domain.exception.CasoException;
-import com.projetoWEG.domain.model.Apontamento;
-import com.projetoWEG.domain.model.Aprovacao;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
-import com.projetoWEG.domain.service.ApontamentosService;
 import com.projetoWEG.domain.service.AprovacaoApontamentoService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

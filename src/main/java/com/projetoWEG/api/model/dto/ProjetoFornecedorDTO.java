@@ -1,17 +1,9 @@
 package com.projetoWEG.api.model.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.projetoWEG.domain.model.Consultor;
 import com.projetoWEG.domain.model.StatusProjeto;
 import lombok.*;
-import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter

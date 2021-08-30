@@ -1,9 +1,6 @@
 package com.projetoWEG.domain.repository;
 
 import com.projetoWEG.domain.model.Consultor;
-import com.projetoWEG.domain.model.Projeto;
-import com.projetoWEG.domain.model.StatusConsultor;
-import com.projetoWEG.domain.model.StatusProjeto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

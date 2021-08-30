@@ -1,9 +1,7 @@
 package com.projetoWEG.api.assembler;
 
 import com.projetoWEG.api.model.dto.ConsultorDTO;
-import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.model.Consultor;
-import com.projetoWEG.domain.model.Projeto;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

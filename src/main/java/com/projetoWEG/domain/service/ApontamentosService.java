@@ -1,10 +1,6 @@
 package com.projetoWEG.domain.service;
 
-//import com.projetoWEG.domain.model.Alocacao;
 import com.projetoWEG.domain.model.Apontamento;
-import com.projetoWEG.domain.model.Aprovacao;
-import com.projetoWEG.domain.model.Consultor;
-import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +12,6 @@ import java.util.List;
 @Service
 public class ApontamentosService {
 
-    private ConsultorService consultorService;
-    private ProjetoService projetoService;
     private ApontamentosRepository apontamentosRepository;
 
     public List<Apontamento> listarTodos() {

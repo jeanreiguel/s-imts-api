@@ -4,7 +4,6 @@ import com.projetoWEG.api.assembler.ProjetoAssembler;
 import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.model.StatusProjeto;
-import com.projetoWEG.domain.repository.ProjetoRepository;
 import com.projetoWEG.domain.service.ProjetoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

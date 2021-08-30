@@ -1,10 +1,8 @@
 package com.projetoWEG.domain.service;
 
 import com.projetoWEG.api.assembler.ConsultorAssembler;
-import com.projetoWEG.api.exceptionhandler.Caso;
 import com.projetoWEG.api.model.dto.ConsultorDTO;
 import com.projetoWEG.domain.exception.CasoException;
-import com.projetoWEG.domain.model.Consultor;
 import com.projetoWEG.domain.repository.ConsultorRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,6 @@
 package com.projetoWEG.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.projetoWEG.api.model.dto.ProjetoDTO;
-import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

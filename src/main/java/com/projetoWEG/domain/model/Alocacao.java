@@ -1,9 +1,7 @@
 package com.projetoWEG.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -15,31 +13,32 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Embeddable
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity(name = "consultor_alocacao")
 public class Alocacao {
 
     @Id
-    private Long id;
+    Long id;
 
     @Valid
     @NotNull
     @JoinColumn(name = "id_consultor")
     @ManyToOne
-    private Consultor idConsultor;
+    Consultor idConsultor;
 
     @Valid
     @NotNull
     @JoinColumn(name = "id_projeto")
     @ManyToOne
-    private Projeto idProjeto;
+    Projeto idProjeto;
 
     @Valid
     @NotBlank
-    private String skill;
+    String skill;
 
     @Valid
     @NotNull
     @Column(name = "horas_total")
-    private int horasTotal;
+    int horasTotal;
 
 }
