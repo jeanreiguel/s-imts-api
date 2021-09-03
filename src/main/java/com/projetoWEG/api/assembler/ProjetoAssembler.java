@@ -1,6 +1,5 @@
 package com.projetoWEG.api.assembler;
 
-import com.projetoWEG.api.model.dto.ProjetoDTO;
 import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.model.Projeto;
 import lombok.AllArgsConstructor;
@@ -21,11 +20,5 @@ public class ProjetoAssembler {
     }
     public List<ProjetoFornecedorDTO> toFornecedorCollection(List<Projeto> projetos) {
         return projetos.stream().map(this::toFornecedor).collect(Collectors.toList());
-    }
-    public ProjetoDTO toModel(Projeto projeto) {
-        return modelMapper.map(projeto, ProjetoDTO.class);
-    }
-    public List<ProjetoDTO> toModelCollection(List<Projeto> projetos) {
-        return projetos.stream().map(this::toModel).collect(Collectors.toList());
     }
 }

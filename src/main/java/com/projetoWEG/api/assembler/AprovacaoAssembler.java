@@ -22,6 +22,7 @@ public class AprovacaoAssembler {
     public AprovacaoDTO toModel(Aprovacao aprovacao) {
         return modelMapper.map(aprovacao, AprovacaoDTO.class);
     }
+
     public List<AprovacaoDTO> toModelCollection(List<Aprovacao> aprovacoes) {
         return aprovacoes.stream().map(this::toModel).collect(Collectors.toList());
     }

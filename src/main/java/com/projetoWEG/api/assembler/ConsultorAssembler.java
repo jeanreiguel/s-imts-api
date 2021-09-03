@@ -18,6 +18,7 @@ public class ConsultorAssembler {
     public ConsultorDTO toFornecedor(Consultor consultor) {
         return modelMapper.map(consultor, ConsultorDTO.class);
     }
+
     public List<ConsultorDTO> toFornecedorCollection(List<Consultor> consultores) {
         return consultores.stream().map(this::toFornecedor).collect(Collectors.toList());
     }

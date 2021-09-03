@@ -10,11 +10,11 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-public class AlocacaoDTO {
+public class AlocacaoAprovacaoDTO {
 
-    private ConsultorDTO idConsultor;
+    private AprovacaoConsultorDTO idConsultor;
 
-    private ProjetoDTO idProjeto;
+    private AprovacaoProjetoDTO idProjeto;
 
     @Valid
     @NotBlank

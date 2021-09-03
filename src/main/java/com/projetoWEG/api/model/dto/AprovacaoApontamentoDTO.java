@@ -7,13 +7,13 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class ApontamentoDTO {
+public class ApontamentoAprovacaoDTO {
 
     private Long id;
 
     private Date data;
 
-    private AlocacaoDTO alocacao;
+    private AlocacaoAprovacaoDTO alocacao;
 
     private int horasTrabalhadas;
 

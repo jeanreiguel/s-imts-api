@@ -15,6 +15,7 @@ public class UsuarioAssembler {
     public UsuarioDTO toModel(Usuario usuario) {
         return modelMapper.map(usuario, UsuarioDTO.class);
     }
+
     public Usuario toEntity(UsuarioInputDTO usuarioInputDTO) {
         return modelMapper.map(usuarioInputDTO, Usuario.class);
     }
