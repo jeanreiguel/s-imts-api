@@ -25,12 +25,14 @@ public class LoginController {
     private UsuarioAssembler usuarioAssembler;
 
     @PostMapping("/authenticate")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody UsuarioInputDTO usuarioInputDTO) throws Exception{
+    public ResponseEntity<?> createAuthenticationToken(
+            @RequestBody UsuarioInputDTO usuarioInputDTO) throws Exception{
 
         Usuario usuario = usuarioAssembler.toEntity(usuarioInputDTO);
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                     usuario.getUsername(), usuario.getPassword()));
+
         } catch (BadCredentialsException ex){
             throw new Exception("Usuário ou senha inválidos", ex);
         }

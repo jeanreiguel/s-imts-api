@@ -14,7 +14,6 @@ import java.util.List;
 public class ConsultorController {
 
     private ConsultorService consultorService;
-    private ConsultorAssembler consultorAssembler;
 
     @GetMapping
     public List<ConsultorDTO> listarConsultores() {

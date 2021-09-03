@@ -28,12 +28,12 @@ public class ProjetoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProjetoFornecedorDTO> listarProjetoId(@PathVariable Long id) {
+    public ProjetoFornecedorDTO listarProjetoId(@PathVariable Long id) {
         return projetoService.listarId(id);
     }
 
     @GetMapping("/nome/{nome}")
-    public ResponseEntity<ProjetoFornecedorDTO> listarProjetoNome(@PathVariable String nome) {
+    public ProjetoFornecedorDTO listarProjetoNome(@PathVariable String nome) {
         return projetoService.listarNome(nome);
     }
 
