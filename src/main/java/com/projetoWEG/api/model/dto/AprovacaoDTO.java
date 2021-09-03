@@ -20,5 +20,5 @@ public class AprovacaoDTO {
 
     private double valorHora;
 
-    private List<ApontamentoDTO> apontamentos;
+    private List<AprovacaoApontamentoDTO> apontamentos;
 }

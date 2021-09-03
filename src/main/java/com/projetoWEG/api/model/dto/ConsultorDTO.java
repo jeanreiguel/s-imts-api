@@ -16,12 +16,12 @@ public class ConsultorDTO {
     @Column(name = "nome_consultor")
     String nome;
 
-    Usuario usuario;
+    UsuarioDTO usuario;
 
     @Column(name = "skill_consultor")
     String skill;
 
-    String limite_horas;
+    int limite_horas;
 
     String status;
 

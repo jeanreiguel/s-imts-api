@@ -22,7 +22,7 @@ public class ProjetoFornecedorDTO {
     @Column(name = "descricao_projeto")
     String descricao;
 
-    List<ConsultorDTO> consultores;
+    List<ProjetoConsultorDTO> consultores;
 
     @Column(name = "status_projeto")
     StatusProjeto status;
