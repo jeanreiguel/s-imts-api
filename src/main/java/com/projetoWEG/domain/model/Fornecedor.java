@@ -11,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -34,10 +35,10 @@ public class Fornecedor {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Column(name = "inicio_contrato")
-    LocalDateTime inicioContrato;
+    Date inicioContrato;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Column(name = "fim_contrato")
-    LocalDateTime fimContrato;
+    Date fimContrato;
 
 }
