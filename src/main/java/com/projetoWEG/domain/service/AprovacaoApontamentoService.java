@@ -17,9 +17,9 @@ import java.util.List;
 @Service
 public class AprovacaoApontamentoService {
 
-    AprovacaoRepository aprovacaoRepository;
-    ApontamentosRepository apontamentosRepository;
-    AprovacaoAssembler aprovacaoAssembler;
+    private AprovacaoRepository aprovacaoRepository;
+    private ApontamentosRepository apontamentosRepository;
+    private AprovacaoAssembler aprovacaoAssembler;
 
     public AprovacaoDTO aprovarHoras(AprovacaoInput aprovacaoInput) {
 

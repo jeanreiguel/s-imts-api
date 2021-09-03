@@ -37,4 +37,5 @@ public class ConsultorService {
     public List<ConsultorDTO> listarStatus(String status) {
         return consultorAssembler.toFornecedorCollection(consultorRepository.findByStatus(status));
     }
+
 }
