@@ -3,8 +3,8 @@ CREATE TABLE fornecedores (
     nome_fornecedor varchar(60) not null,
     email_fornecedor varchar(150) not null,
     telefone_fornecedor varchar(25) not null,
-    inicio_contrato timestamp not null,
-    fim_contrato timestamp,
+    inicio_contrato date not null,
+    fim_contrato date,
     primary key (id_fornecedor)
 );
 
@@ -13,7 +13,7 @@ INSERT INTO fornecedores VALUES (
     "IBTECH",
     "ibtech_business@gmail.com",
     "55+ (47)0000-0000",
-    SYSDATE(),
+    "10-10-20",
     null
 );
 INSERT INTO fornecedores VALUES (
@@ -21,6 +21,6 @@ INSERT INTO fornecedores VALUES (
     "DEVEXP",
     "devexp_business@gmail.com",
     "55+ (47)0000-0000",
-    SYSDATE(),
+    "10-10-20",
     null
 );

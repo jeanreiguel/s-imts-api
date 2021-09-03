@@ -4,8 +4,8 @@ CREATE TABLE PROJETOS(
     nome_projeto varchar(150) not null,
     descricao_projeto varchar(500) not null,
     status_projeto varchar(45) not null,
-    data_inicio varchar(20),
-    data_fim varchar(20),
+    data_inicio date,
+    data_fim date,
     horas_apontadas varchar(10),
     horas_total varchar(10) not null,
       primary key (id_projeto)
@@ -16,7 +16,7 @@ INSERT INTO PROJETOS VALUES(
     "ABC","Restauração de alteradores",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ -- ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "ANDAMENTO",
-    "10/10/2020",
+    "10-10-20",
     null,
     "00",
     "2500"
@@ -26,7 +26,7 @@ INSERT INTO PROJETOS VALUES(
     "XYZ","Autamatização de manufatura",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ -- ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "CONCLUÍDO",
-    "10/10/2020",
+    "10-10-20",
     null,
     "2500",
     "2500"
