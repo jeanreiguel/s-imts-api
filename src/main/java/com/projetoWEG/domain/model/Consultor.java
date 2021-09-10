@@ -60,4 +60,10 @@ public class Consultor {
             joinColumns = @JoinColumn(name = "alocacao_id_consultor",referencedColumnName = "cadastro_consultor"),
             inverseJoinColumns = @JoinColumn(name = "id_apontamento",referencedColumnName = "id_apontamento"))
     List<Apontamento> apontamentos;
+
+    @ManyToMany
+    @JoinTable(name = "requisicoes",
+            joinColumns = @JoinColumn(name = "requisicao_id_consultor",referencedColumnName = "cadastro_consultor"),
+            inverseJoinColumns = @JoinColumn(name = "requisicao_id",referencedColumnName = "requisicao_id"))
+    List<Requisicao> requisicoes;
 }
