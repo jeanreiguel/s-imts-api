@@ -13,10 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class AprovacaoInput {
+public class AprovacaoInputDTO {
 
-    private Long id;
-    
     private Date data;
 
     private String nomeFornecedor;
@@ -27,6 +25,6 @@ public class AprovacaoInput {
 
     private double valorHora;
 
-    private List<ApontamentoInput> apontamentos = new ArrayList<>();
+    private List<ApontamentoInputDTO> apontamentos = new ArrayList<>();
 
 }

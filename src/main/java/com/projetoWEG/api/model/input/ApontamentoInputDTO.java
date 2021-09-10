@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ApontamentoInput {
+public class ApontamentoInputDTO {
 
     private Long id;
 }
