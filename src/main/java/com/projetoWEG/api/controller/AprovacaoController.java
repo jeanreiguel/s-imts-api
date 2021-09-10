@@ -1,7 +1,7 @@
 package com.projetoWEG.api.controller;
 
-import com.projetoWEG.api.model.dto.AprovacaoDTO;
-import com.projetoWEG.api.model.input.AprovacaoInput;
+import com.projetoWEG.api.model.dto.aprovacao.AprovacaoDTO;
+import com.projetoWEG.api.model.input.AprovacaoInputDTO;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
 import com.projetoWEG.domain.service.AprovacaoApontamentoService;
 import lombok.AllArgsConstructor;
@@ -22,7 +22,7 @@ public class AprovacaoController {
     }
 
     @PostMapping("/inserir")
-    public AprovacaoDTO inserirAprovacao(@RequestBody AprovacaoInput aprovacaoInput) {
+    public AprovacaoDTO inserirAprovacao(@RequestBody AprovacaoInputDTO aprovacaoInput) {
 
         return aprovacaoApontamentoService.aprovarHoras(aprovacaoInput);
     }

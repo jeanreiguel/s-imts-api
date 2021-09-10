@@ -1,6 +1,6 @@
 package com.projetoWEG.api.controller;
 
-import com.projetoWEG.api.model.dto.AprovacaoApontamentoDTO;
+import com.projetoWEG.api.model.dto.aprovacao.AprovacaoApontamentoDTO;
 import com.projetoWEG.domain.service.ApontamentosService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
