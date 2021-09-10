@@ -1,4 +1,4 @@
-package com.projetoWEG.api.model.dto;
+package com.projetoWEG.api.model.dto.aprovacao;
 
 import com.projetoWEG.domain.model.StatusProjeto;
 import lombok.Getter;
