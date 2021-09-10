@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AprovacaoRepository extends JpaRepository<Aprovacao, Long> {
+    //findByConsultor, findByProjeto
 }
