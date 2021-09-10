@@ -25,11 +25,11 @@ public class ProjetoService {
 
     public ProjetoFornecedorDTO listarId(Long id) {
         return projetoAssembler.toFornecedor(projetoRepository.findById(id)
-                .orElseThrow(() -> new CasoException("Projeto não encontradO.")));
+                .orElseThrow(() -> new CasoException("Projeto não encontrado.")));
     }
     public ProjetoFornecedorDTO listarNome(String nome) {
         return projetoAssembler.toFornecedor(projetoRepository.findByNome(nome)
-                .orElseThrow(() -> new CasoException("Projeto não encontradO.")));
+                .orElseThrow(() -> new CasoException("Projeto não encontrado.")));
     }
     public List<Projeto> listarSecao(String secao) {
 

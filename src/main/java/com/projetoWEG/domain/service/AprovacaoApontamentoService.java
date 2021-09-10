@@ -1,8 +1,8 @@
 package com.projetoWEG.domain.service;
 
 import com.projetoWEG.api.assembler.AprovacaoAssembler;
-import com.projetoWEG.api.model.dto.AprovacaoDTO;
-import com.projetoWEG.api.model.input.AprovacaoInput;
+import com.projetoWEG.api.model.dto.aprovacao.AprovacaoDTO;
+import com.projetoWEG.api.model.input.AprovacaoInputDTO;
 import com.projetoWEG.domain.exception.CasoException;
 import com.projetoWEG.domain.model.Apontamento;
 import com.projetoWEG.domain.model.Aprovacao;
@@ -21,14 +21,14 @@ public class AprovacaoApontamentoService {
     private ApontamentosRepository apontamentosRepository;
     private AprovacaoAssembler aprovacaoAssembler;
 
-    public AprovacaoDTO aprovarHoras(AprovacaoInput aprovacaoInput) {
+    public AprovacaoDTO aprovarHoras(AprovacaoInputDTO aprovacaoInput) {
 
         List<Apontamento> apontamentos = new ArrayList<>();
 
         aprovacaoInput.getApontamentos().forEach(
                 apontamento -> {
                     Apontamento apontamentoadd = apontamentosRepository.findById(apontamento.getId())
-                                    .orElseThrow(() -> new CasoException("Apontamento não encontradO."));
+                                    .orElseThrow(() -> new CasoException("Apontamento não encontrado."));
                     apontamentoadd.setSituacaoApontamento("APROVADO");
                     apontamentos.add(apontamentoadd);
                 }

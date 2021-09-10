@@ -24,12 +24,12 @@ public class ConsultorService {
     public ResponseEntity<ConsultorDTO> listarId(Long id) {
         return consultorRepository.findById(id).map(consultor -> {
             return ResponseEntity.ok(consultorAssembler.toFornecedor(consultor));
-        }).orElseThrow(() -> new CasoException("Consultor não encontradO."));
+        }).orElseThrow(() -> new CasoException("Consultor não encontrado."));
     }
     public ResponseEntity<ConsultorDTO> listarNome(String nome) {
         return consultorRepository.findByNome(nome).map(consultor -> {
             return ResponseEntity.ok(consultorAssembler.toFornecedor(consultor));
-        }).orElseThrow(() -> new CasoException("Consultor não encontradO."));
+        }).orElseThrow(() -> new CasoException("Consultor não encontrado."));
     }
     public List<ConsultorDTO> listarContaining(String contain) {
         return consultorAssembler.toFornecedorCollection(consultorRepository.findByNomeContaining(contain));

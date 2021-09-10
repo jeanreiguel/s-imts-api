@@ -1,7 +1,7 @@
 package com.projetoWEG.domain.service;
 
 import com.projetoWEG.api.assembler.ApontamentoAssembler;
-import com.projetoWEG.api.model.dto.AprovacaoApontamentoDTO;
+import com.projetoWEG.api.model.dto.aprovacao.AprovacaoApontamentoDTO;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
