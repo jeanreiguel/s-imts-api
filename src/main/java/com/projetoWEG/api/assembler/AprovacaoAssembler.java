@@ -1,7 +1,7 @@
 package com.projetoWEG.api.assembler;
 
-import com.projetoWEG.api.model.dto.AprovacaoDTO;
-import com.projetoWEG.api.model.input.AprovacaoInput;
+import com.projetoWEG.api.model.dto.aprovacao.AprovacaoDTO;
+import com.projetoWEG.api.model.input.AprovacaoInputDTO;
 import com.projetoWEG.domain.model.Aprovacao;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -16,7 +16,7 @@ public class AprovacaoAssembler {
 
     private ModelMapper modelMapper;
 
-    public Aprovacao toEntity(AprovacaoInput aprovacaoInput) {
+    public Aprovacao toEntity(AprovacaoInputDTO aprovacaoInput) {
         return modelMapper.map(aprovacaoInput, Aprovacao.class);
     }
     public AprovacaoDTO toModel(Aprovacao aprovacao) {
