@@ -1,6 +1,5 @@
 package com.projetoWEG.api.model.dto;
 
-import com.projetoWEG.domain.model.Usuario;
 import lombok.Getter;
 import lombok.Setter;
 

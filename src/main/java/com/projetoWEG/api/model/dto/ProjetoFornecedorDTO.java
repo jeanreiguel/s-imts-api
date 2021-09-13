@@ -4,6 +4,7 @@ import com.projetoWEG.domain.model.StatusProjeto;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -28,9 +29,9 @@ public class ProjetoFornecedorDTO {
     StatusProjeto status;
 
 
-    String data_inicio;
+    LocalDateTime data_inicio;
 
-    String data_fim;
+    LocalDateTime data_fim;
 
     int horas_apontadas;
 
