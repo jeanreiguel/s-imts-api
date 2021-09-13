@@ -47,6 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers(HttpMethod.GET, AUTH_LIST).hasRole("FORNECEDOR")
 //                .antMatchers(HttpMethod.POST, AUTH_LIST).hasRole("FORNECEDOR")
                 .antMatchers(AUTH_LIST).permitAll()
+                .antMatchers("/authenticate").permitAll()
                 .anyRequest().authenticated().and().cors()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
