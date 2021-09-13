@@ -36,6 +36,4 @@ public class ConsultorController {
         return consultorService.listarStatus(status);
     }
 
-//    @GetMapping("alocacoes/{id}")
-//    public List<Consultor> listar
 }
