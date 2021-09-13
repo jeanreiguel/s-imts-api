@@ -3,8 +3,8 @@ CREATE TABLE fornecedores (
     nome_fornecedor varchar(60) not null,
     email_fornecedor varchar(150) not null,
     telefone_fornecedor varchar(25) not null,
-    inicio_contrato date not null,
-    fim_contrato date,
+    inicio_contrato timestamp not null,
+    fim_contrato timestamp,
     primary key (id_fornecedor)
 );
 

@@ -1,4 +1,4 @@
-CREATE TABLE fornecedor_responsaveis (
+ CREATE TABLE fornecedor_responsaveis (
     id bigint not null auto_increment,
     id_fornecedor bigint not null,
     nome varchar(50) not null,
