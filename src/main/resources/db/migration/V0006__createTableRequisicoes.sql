@@ -5,4 +5,4 @@ CREATE TABLE Requisicoes(
     descricao varchar(255) not null,
     data_requisicao timestamp not null,
     data_apontamento timestamp not null
-)
+);

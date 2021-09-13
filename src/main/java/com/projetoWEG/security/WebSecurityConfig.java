@@ -44,9 +44,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws  Exception {
         http.csrf().disable().authorizeRequests()
-                .antMatchers(HttpMethod.GET, AUTH_LIST).hasRole("FORNECEDOR")
-                .antMatchers(HttpMethod.POST, AUTH_LIST).hasRole("FORNECEDOR")
-                .antMatchers("/authenticate").permitAll()
+//                .antMatchers(HttpMethod.GET, AUTH_LIST).hasRole("FORNECEDOR")
+//                .antMatchers(HttpMethod.POST, AUTH_LIST).hasRole("FORNECEDOR")
+                .antMatchers(AUTH_LIST).permitAll()
                 .anyRequest().authenticated().and().cors()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))

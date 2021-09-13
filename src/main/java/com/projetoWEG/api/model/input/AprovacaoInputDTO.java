@@ -15,8 +15,6 @@ import java.util.List;
 @Setter
 public class AprovacaoInputDTO {
 
-    private Date data;
-
     private String nomeFornecedor;
 
     private String nomeResponsavel;
