@@ -3,6 +3,7 @@ package com.projetoWEG.api.model.dto.aprovacao;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +11,9 @@ import java.util.List;
 @Setter
 public class AprovacaoDTO {
 
-    private Date data;
+    private Long id;
+
+    private LocalDateTime data;
 
     private String nomeFornecedor;
 
