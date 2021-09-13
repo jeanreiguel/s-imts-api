@@ -6,9 +6,9 @@ CREATE TABLE PROJETOS(
     status_projeto varchar(45) not null,
     data_inicio timestamp,
     data_fim timestamp,
-    horas_apontadas varchar(10),
-    horas_total varchar(10) not null,
-      primary key (id_projeto)
+    horas_apontadas bigint,
+    horas_total bigint not null,
+     primary key (id_projeto)
 );
 
 INSERT INTO PROJETOS VALUES(
@@ -18,8 +18,8 @@ INSERT INTO PROJETOS VALUES(
     "ANDAMENTO",
     '2008-01-01 00:00:01',
     null,
-    "00",
-    "2500"
+    0,
+    2500
 );
 INSERT INTO PROJETOS VALUES(
     null,
@@ -28,6 +28,6 @@ INSERT INTO PROJETOS VALUES(
     "CONCLUÍDO",
     '2008-01-01 00:00:01',
     null,
-    "2500",
-    "2500"
+    2500,
+    2500
 );
