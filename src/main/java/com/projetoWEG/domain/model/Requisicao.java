@@ -20,7 +20,6 @@ import java.time.LocalDateTime;
 public class Requisicao {
 
     @Id
-    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "requisicao_id")
     Long id;
