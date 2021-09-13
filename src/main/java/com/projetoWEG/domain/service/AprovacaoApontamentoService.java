@@ -10,6 +10,8 @@ import com.projetoWEG.domain.repository.ApontamentosRepository;
 import com.projetoWEG.domain.repository.AprovacaoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,12 +31,15 @@ public class AprovacaoApontamentoService {
                 apontamento -> {
                     Apontamento apontamentoadd = apontamentosRepository.findById(apontamento.getId())
                                     .orElseThrow(() -> new CasoException("Apontamento não encontrado."));
+                    apontamentoadd.setId(apontamento.getId());
                     apontamentoadd.setSituacaoApontamento("APROVADO");
                     apontamentos.add(apontamentoadd);
                 }
         );
         Aprovacao aprovacao = aprovacaoAssembler.toEntity(aprovacaoInput);
         aprovacao.setApontamentos(apontamentos);
+        aprovacao.setData(LocalDateTime.now());
+
         aprovacaoRepository.save(aprovacao);
         return aprovacaoAssembler.toModel(aprovacao);
     }
