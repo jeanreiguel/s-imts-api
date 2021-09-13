@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -57,10 +58,10 @@ public class Projeto {
    StatusProjeto status;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   Date dataInicio;
+   LocalDateTime dataInicio;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   Date dataFim;
+   LocalDateTime dataFim;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Column(name = "horas_apontadas")

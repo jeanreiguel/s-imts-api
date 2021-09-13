@@ -8,6 +8,7 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -33,7 +34,7 @@ public class Apontamento {
 
     @Valid
     @NotNull
-     Date data;
+    LocalDateTime data;
 
     @Valid
     @NotNull

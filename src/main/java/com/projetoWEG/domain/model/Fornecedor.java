@@ -35,10 +35,10 @@ public class Fornecedor {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Column(name = "inicio_contrato")
-    Date inicioContrato;
+    LocalDateTime inicioContrato;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Column(name = "fim_contrato")
-    Date fimContrato;
+    LocalDateTime fimContrato;
 
 }

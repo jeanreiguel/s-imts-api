@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -20,12 +21,11 @@ public class Aprovacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
     Long id;
 
     @Valid
     @NotNull
-    Date data;
+    LocalDateTime data;
 
     @Valid
     @NotBlank
