@@ -16,7 +16,7 @@ public class ConsultorDTO {
     @Column(name = "nome_consultor")
     String nome;
 
-     List<AlocacaoSkillDTO> skills;
+     List<AlocacaoConsultorDTO> alocacoes;
 
     UsuarioDTO usuario;
 
@@ -24,4 +24,5 @@ public class ConsultorDTO {
 
     String status;
 
+    List<RequisicaoDTO> requisicoes;
 }
