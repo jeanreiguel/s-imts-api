@@ -1,6 +1,5 @@
 package com.projetoWEG.api.model.input;
 
-import com.projetoWEG.domain.model.Consultor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class RequisicaoInputDTO {
 
-    Consultor idConsultor;
+    Long idConsultor;
 
     String nomeResponsavel;
 
