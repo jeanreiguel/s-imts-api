@@ -19,7 +19,6 @@ public class ProjetoService {
     private ProjetoAssembler projetoAssembler;
 
     public List<Projeto> listarTodos() {
-
         return projetoRepository.findAll();
     }
 

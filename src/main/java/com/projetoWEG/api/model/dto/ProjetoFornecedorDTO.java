@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -29,12 +30,12 @@ public class ProjetoFornecedorDTO {
     StatusProjeto status;
 
 
-    LocalDateTime data_inicio;
+    Date dataInicio;
 
-    LocalDateTime data_fim;
+    Date dataFim;
 
-    int horas_apontadas;
+    int horasApontadas;
 
-   int horas_total;
+   int horasTotal;
 
 }

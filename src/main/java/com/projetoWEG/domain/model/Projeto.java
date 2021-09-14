@@ -58,10 +58,10 @@ public class Projeto {
    StatusProjeto status;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   LocalDateTime dataInicio;
+   Date dataInicio;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-   LocalDateTime dataFim;
+   Date dataFim;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Column(name = "horas_apontadas")
