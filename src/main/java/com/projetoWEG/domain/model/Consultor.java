@@ -36,11 +36,6 @@ public class Consultor {
     Usuario usuario;
 
     @Valid
-    @NotBlank
-    @Column(name = "skill_consultor")
-    String skill;
-
-    @Valid
     @NotNull
     @Size(min = 1, max = 4)
     @Column(name = "limite_horas")
@@ -66,4 +61,10 @@ public class Consultor {
             joinColumns = @JoinColumn(name = "requisicao_id_consultor",referencedColumnName = "cadastro_consultor"),
             inverseJoinColumns = @JoinColumn(name = "requisicao_id",referencedColumnName = "requisicao_id"))
     List<Requisicao> requisicoes;
+
+    @ManyToMany
+    @JoinTable(name = "consultor_alocacao",
+            joinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"),
+            inverseJoinColumns = @JoinColumn(name = "id",referencedColumnName = "id"))
+    List<Alocacao> skills;
 }

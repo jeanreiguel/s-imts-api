@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,12 +16,11 @@ public class ConsultorDTO {
     @Column(name = "nome_consultor")
     String nome;
 
+     List<AlocacaoSkillDTO> skills;
+
     UsuarioDTO usuario;
 
-    @Column(name = "skill_consultor")
-    String skill;
-
-    int limite_horas;
+    Long limiteHoras;
 
     String status;
 
