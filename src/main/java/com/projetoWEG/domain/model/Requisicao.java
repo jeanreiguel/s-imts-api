@@ -25,7 +25,6 @@ public class Requisicao {
     Long id;
 
     @Valid
-    @NotBlank
     @JoinColumn(name = "requisicao_id_consultor")
     @ManyToOne
     Consultor idConsultor;
@@ -40,8 +39,5 @@ public class Requisicao {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     LocalDateTime dataRequisicao;
-
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    LocalDateTime dataApontamento;
 
 }

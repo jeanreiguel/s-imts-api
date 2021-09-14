@@ -39,7 +39,7 @@ public class Consultor {
     @NotNull
     @Size(min = 1, max = 4)
     @Column(name = "limite_horas")
-    String limiteHoras;
+    Long limiteHoras;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     String status;
@@ -66,5 +66,5 @@ public class Consultor {
     @JoinTable(name = "consultor_alocacao",
             joinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"),
             inverseJoinColumns = @JoinColumn(name = "id",referencedColumnName = "id"))
-    List<Alocacao> skills;
+    List<Alocacao> alocacoes;
 }
