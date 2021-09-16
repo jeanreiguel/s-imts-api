@@ -52,6 +52,12 @@ public class Projeto {
            inverseJoinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"))
    List<Consultor> consultores;
 
+   @ManyToMany
+   @JoinTable(name = "apontamentos",
+           joinColumns = @JoinColumn(name = "alocacao_id_projeto",referencedColumnName = "id_projeto"),
+           inverseJoinColumns = @JoinColumn(name = "id_apontamento",referencedColumnName = "id_apontamento"))
+   List<Apontamento> apontamentos;
+
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Enumerated(EnumType.STRING)
    @Column(name = "status_projeto")
