@@ -7,7 +7,7 @@ import javax.persistence.Column;
 
 @Getter
 @Setter
-public class AprovacaoConsultorDTO {
+public class AprovacaoAlocacaoConsultorDTO {
 
     @Column(name = "nome_consultor")
     String nome;

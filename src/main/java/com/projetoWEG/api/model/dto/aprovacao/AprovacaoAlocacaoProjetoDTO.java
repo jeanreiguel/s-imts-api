@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class AprovacaoProjetoDTO {
+public class AprovacaoAlocacaoProjetoDTO {
 
     @Column(name = "id_projeto")
     Long id;

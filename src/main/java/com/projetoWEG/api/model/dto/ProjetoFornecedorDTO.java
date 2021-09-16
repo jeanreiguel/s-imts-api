@@ -1,10 +1,12 @@
 package com.projetoWEG.api.model.dto;
 
+import com.projetoWEG.api.model.dto.aprovacao.ApontamentoProjetoDTO;
+import com.projetoWEG.api.model.dto.listagem.ProjetoConsultorDTO;
+import com.projetoWEG.domain.model.Apontamento;
 import com.projetoWEG.domain.model.StatusProjeto;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -26,9 +28,10 @@ public class ProjetoFornecedorDTO {
 
     List<ProjetoConsultorDTO> consultores;
 
+    List<ApontamentoProjetoDTO> apontamentos;
+
     @Column(name = "status_projeto")
     StatusProjeto status;
-
 
     Date dataInicio;
 

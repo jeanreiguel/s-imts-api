@@ -1,4 +1,4 @@
-package com.projetoWEG.api.model.dto;
+package com.projetoWEG.api.model.dto.listagem;
 
 import lombok.Getter;
 import lombok.Setter;

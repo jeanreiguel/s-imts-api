@@ -1,4 +1,4 @@
-package com.projetoWEG.api.model.dto;
+package com.projetoWEG.api.model.dto.listagem;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,11 +16,11 @@ public class ConsultorDTO {
     @Column(name = "nome_consultor")
     String nome;
 
-     List<AlocacaoConsultorDTO> alocacoes;
-
     List<ProjetoConsultorDTO> projetos;
 
-    UsuarioDTO usuario;
+    List<AlocacaoConsultorDTO> alocacoes;
+
+    UsuarioConsultorDTO usuario;
 
     Long limiteHoras;
 

@@ -12,16 +12,12 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class AprovacaoAlocacaoDTO {
 
-    private AprovacaoConsultorDTO idConsultor;
+    private AprovacaoAlocacaoConsultorDTO idConsultor;
 
-    private AprovacaoProjetoDTO idProjeto;
+    private AprovacaoAlocacaoProjetoDTO idProjeto;
 
-    @Valid
-    @NotBlank
     private String skill;
 
-    @Valid
-    @NotNull
     @Column(name = "horas_total")
     private int horasTotal;
 }
