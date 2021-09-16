@@ -20,6 +20,4 @@ public class AprovacaoAlocacaoProjetoDTO {
     @Column(name = "nome_projeto")
     String nome;
 
-    @Column(name = "status_projeto")
-    StatusProjeto status;
 }

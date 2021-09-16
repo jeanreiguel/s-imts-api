@@ -18,6 +18,5 @@ public class AprovacaoAlocacaoDTO {
 
     private String skill;
 
-    @Column(name = "horas_total")
     private int horasTotal;
 }
