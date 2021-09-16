@@ -2,23 +2,17 @@ package com.projetoWEG.domain.service;
 
 import com.projetoWEG.api.assembler.ApontamentoAssembler;
 import com.projetoWEG.api.assembler.AprovacaoAssembler;
-import com.projetoWEG.api.assembler.RequisicaoAssembler;
-import com.projetoWEG.api.model.dto.RequisicaoDTO;
 import com.projetoWEG.api.model.dto.aprovacao.AprovacaoDTO;
 import com.projetoWEG.api.model.input.AprovacaoInputDTO;
-import com.projetoWEG.api.model.input.RequisicaoInputDTO;
 import com.projetoWEG.domain.exception.CasoException;
 import com.projetoWEG.domain.model.Apontamento;
 import com.projetoWEG.domain.model.Aprovacao;
-import com.projetoWEG.domain.model.Requisicao;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
 import com.projetoWEG.domain.repository.AprovacaoRepository;
-import com.projetoWEG.domain.repository.RequisicaoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
