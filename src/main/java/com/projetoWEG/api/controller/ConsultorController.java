@@ -1,7 +1,6 @@
 package com.projetoWEG.api.controller;
 
-import com.projetoWEG.api.assembler.ConsultorAssembler;
-import com.projetoWEG.api.model.dto.ConsultorDTO;
+import com.projetoWEG.api.model.dto.listagem.ConsultorDTO;
 import com.projetoWEG.domain.service.ConsultorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
