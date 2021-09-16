@@ -1,6 +1,6 @@
 package com.projetoWEG.api.assembler;
 
-import com.projetoWEG.api.model.dto.ConsultorDTO;
+import com.projetoWEG.api.model.dto.listagem.ConsultorDTO;
 import com.projetoWEG.domain.model.Consultor;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

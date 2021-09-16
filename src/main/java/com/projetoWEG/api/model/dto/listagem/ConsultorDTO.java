@@ -18,6 +18,8 @@ public class ConsultorDTO {
 
      List<AlocacaoConsultorDTO> alocacoes;
 
+    List<ProjetoConsultorDTO> projetos;
+
     UsuarioDTO usuario;
 
     Long limiteHoras;

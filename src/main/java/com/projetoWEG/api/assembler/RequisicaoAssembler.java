@@ -1,6 +1,6 @@
 package com.projetoWEG.api.assembler;
 
-import com.projetoWEG.api.model.dto.RequisicaoDTO;
+import com.projetoWEG.api.model.dto.listagem.RequisicaoDTO;
 import com.projetoWEG.api.model.input.RequisicaoInputDTO;
 import com.projetoWEG.domain.model.Requisicao;
 import lombok.AllArgsConstructor;
