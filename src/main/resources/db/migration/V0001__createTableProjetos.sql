@@ -1,6 +1,6 @@
 CREATE TABLE PROJETOS(
     id_projeto bigint not null auto_increment,
-    secao_projeto varchar(100) not null,
+    secao_projeto bigint not null,
     nome_projeto varchar(150) not null,
     descricao_projeto varchar(500) not null,
     status_projeto varchar(45) not null,
@@ -8,12 +8,13 @@ CREATE TABLE PROJETOS(
     data_fim timestamp,
     horas_apontadas bigint,
     horas_total bigint not null,
-     primary key (id_projeto)
+     primary key (id_projeto),
+     foreign key projetos(secao_projeto) references secoes(secao_id)
 );
 
 INSERT INTO PROJETOS VALUES(
     null,
-    "ABC",
+    1,
     "Restauração de alteradores",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ -- ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "ANDAMENTO",
@@ -24,7 +25,7 @@ INSERT INTO PROJETOS VALUES(
 );
 INSERT INTO PROJETOS VALUES(
     null,
-    "XYZ","Autamatização de manufatura",
+    1,"Autamatização de manufatura",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ -- ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
     "CONCLUÍDO",
     '2008-01-01',

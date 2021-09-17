@@ -3,7 +3,7 @@ CREATE TABLE apontamentos (
     alocacao_id bigint not null,
     alocacao_id_consultor bigint not null,
     alocacao_id_projeto bigint not null,
-    alocacao_skill varchar(255) not null,
+    alocacao_skill_id varchar(255) not null,
     alocacao_horas_total int not null,
     data timestamp not null,
     horas_trabalhadas int,
