@@ -34,7 +34,9 @@ public class Alocacao {
 
     @Valid
     @NotBlank
-    String skill;
+    @OneToOne
+    @JoinColumn(name = "skill_id")
+    Skill skill;
 
     @Valid
     @NotNull

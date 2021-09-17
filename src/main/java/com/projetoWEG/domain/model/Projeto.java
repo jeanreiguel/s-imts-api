@@ -10,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -31,8 +32,9 @@ public class Projeto {
    @Valid
    @NotBlank
    @Size(max = 255)
-   @Column(name = "secao_projeto")
-   String secao;
+   @JoinColumn(name = "secao_projeto")
+   @ManyToOne
+   Secao secao;
 
    @Valid
    @NotBlank
@@ -58,6 +60,10 @@ public class Projeto {
            inverseJoinColumns = @JoinColumn(name = "id_apontamento",referencedColumnName = "id_apontamento"))
    List<Apontamento> apontamentos;
 
+
+   @ManyToMany
+   List<Skill> skills = new ArrayList<>();
+
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Enumerated(EnumType.STRING)
    @Column(name = "status_projeto")
@@ -77,4 +83,11 @@ public class Projeto {
    @NotNull
    @Column(name = "horas_total")
    int horasTotal;
+
+
+   public Skill adicionarSkill(Skill skill) {
+      this.skills.add(skill);
+
+      return skill;
+   }
 }
