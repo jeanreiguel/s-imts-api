@@ -1,5 +1,6 @@
 package com.projetoWEG.api.model.dto.aprovacao;
 
+import com.projetoWEG.domain.model.Secao;
 import com.projetoWEG.domain.model.StatusProjeto;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +16,7 @@ public class AprovacaoAlocacaoProjetoDTO {
     Long id;
 
     @Column(name = "secao_projeto")
-    String secao;
+    Secao secao;
 
     @Column(name = "nome_projeto")
     String nome;

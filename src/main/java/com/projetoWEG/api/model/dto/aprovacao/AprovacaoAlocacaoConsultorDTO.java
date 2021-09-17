@@ -12,6 +12,5 @@ public class AprovacaoAlocacaoConsultorDTO {
     @Column(name = "nome_consultor")
     String nome;
 
-
     int limite_horas;
 }

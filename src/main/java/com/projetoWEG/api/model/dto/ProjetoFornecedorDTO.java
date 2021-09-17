@@ -3,6 +3,8 @@ package com.projetoWEG.api.model.dto;
 import com.projetoWEG.api.model.dto.aprovacao.ApontamentoProjetoDTO;
 import com.projetoWEG.api.model.dto.listagem.ProjetoConsultorDTO;
 import com.projetoWEG.domain.model.Apontamento;
+import com.projetoWEG.domain.model.Secao;
+import com.projetoWEG.domain.model.Skill;
 import com.projetoWEG.domain.model.StatusProjeto;
 import lombok.*;
 
@@ -19,7 +21,7 @@ public class ProjetoFornecedorDTO {
     Long id;
 
     @Column(name = "secao_projeto")
-    String secao;
+    Secao secao;
     @Column(name = "nome_projeto")
     String nome;
 
@@ -29,6 +31,8 @@ public class ProjetoFornecedorDTO {
     List<ProjetoConsultorDTO> consultores;
 
     List<ApontamentoProjetoDTO> apontamentos;
+
+    List<Skill> skills;
 
     @Column(name = "status_projeto")
     StatusProjeto status;

@@ -1,5 +1,6 @@
 package com.projetoWEG.api.model.dto.listagem;
 
+import com.projetoWEG.domain.model.Skill;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,5 +8,5 @@ import lombok.Setter;
 @Setter
 public class AlocacaoConsultorDTO {
 
-    String skill;
+    Skill idSkill;
 }

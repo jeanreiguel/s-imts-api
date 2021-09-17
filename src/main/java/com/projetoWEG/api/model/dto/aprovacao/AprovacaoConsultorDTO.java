@@ -1,5 +1,6 @@
 package com.projetoWEG.api.model.dto.aprovacao;
 
+import com.projetoWEG.domain.model.Skill;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +14,7 @@ public class AprovacaoConsultorDTO {
     String nome;
 
     @Column(name = "skill_consultor")
-    String skill;
+    Skill skill;
 
     int limite_horas;
 }

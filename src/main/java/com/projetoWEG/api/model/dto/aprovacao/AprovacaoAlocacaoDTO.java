@@ -1,5 +1,6 @@
 package com.projetoWEG.api.model.dto.aprovacao;
 
+import com.projetoWEG.domain.model.Skill;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +17,7 @@ public class AprovacaoAlocacaoDTO {
 
     private AprovacaoAlocacaoProjetoDTO idProjeto;
 
-    private String skill;
+    private Skill skill;
 
     private int horasTotal;
 }
