@@ -1,6 +1,5 @@
 package com.projetoWEG.domain.service;
 
-import com.projetoWEG.api.assembler.ConsultorAssembler;
 import com.projetoWEG.api.assembler.RequisicaoAssembler;
 import com.projetoWEG.api.model.dto.listagem.RequisicaoDTO;
 import com.projetoWEG.api.model.input.RequisicaoInputDTO;
@@ -19,7 +18,6 @@ public class RequisicaoService {
     private RequisicaoAssembler requisicaoAssembler;
     private RequisicaoRepository requisicaoRepository;
     private ConsultorRepository consultorRepository;
-    private ConsultorAssembler consultorAssembler;
 
     public RequisicaoDTO gerarRequisicao(RequisicaoInputDTO requisicaoInputDTO) {
 
