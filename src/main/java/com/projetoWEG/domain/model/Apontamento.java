@@ -16,7 +16,6 @@ import java.util.Date;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-
 @Entity(name = "apontamentos")
 public class Apontamento {
 

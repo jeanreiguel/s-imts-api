@@ -27,4 +27,9 @@ public class Skill {
     @Column(name = "skill_nome")
     String nome;
 
+    @Column(name = "horas_apontadas")
+    Long horasApontadas;
+
+    @Column(name = "horas_total")
+    Long horasTotal;
 }

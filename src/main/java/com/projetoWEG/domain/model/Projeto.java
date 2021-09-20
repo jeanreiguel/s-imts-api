@@ -60,9 +60,11 @@ public class Projeto {
            inverseJoinColumns = @JoinColumn(name = "id_apontamento",referencedColumnName = "id_apontamento"))
    List<Apontamento> apontamentos;
 
-
    @ManyToMany
-   List<Skill> skills = new ArrayList<>();
+   @JoinTable(name = "skills",
+           joinColumns = @JoinColumn(name = "id_projeto",referencedColumnName = "id_projeto"),
+           inverseJoinColumns = @JoinColumn(name = "skill_id",referencedColumnName = "skill_id"))
+   List<Skill> skills;
 
    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
    @Enumerated(EnumType.STRING)
