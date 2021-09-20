@@ -12,19 +12,19 @@ CREATE TABLE consultores (
         "Jean Henrique Reiguel",
         1600,
         "ATIVO",
-        null
+        1
     );
     INSERT INTO consultores VALUES (
         null,
         "Maria Gabriela de Souza Cruz",
         1200,
         "ATIVO",
-       null
+       2
     );
     INSERT INTO consultores VALUES (
         null,
         "Roberta Polez Bassegio",
         1800,
         "ATIVO",
-        null
+        3
     );
