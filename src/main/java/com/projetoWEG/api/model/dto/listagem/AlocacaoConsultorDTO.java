@@ -8,5 +8,5 @@ import lombok.Setter;
 @Setter
 public class AlocacaoConsultorDTO {
 
-    Skill idSkill;
+    Skill skill;
 }

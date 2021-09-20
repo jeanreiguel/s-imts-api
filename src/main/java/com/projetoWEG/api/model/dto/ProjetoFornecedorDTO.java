@@ -22,6 +22,7 @@ public class ProjetoFornecedorDTO {
 
     @Column(name = "secao_projeto")
     Secao secao;
+
     @Column(name = "nome_projeto")
     String nome;
 
