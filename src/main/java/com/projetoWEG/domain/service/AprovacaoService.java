@@ -36,6 +36,8 @@ public class AprovacaoApontamentoService {
                 apontamento -> {
                     Apontamento apontamentoadd = apontamentosRepository.findById(apontamento.getId())
                                     .orElseThrow(() -> new CasoException("Apontamento não encontrado."));
+
+                    apontamentoadd.aprovarApontamento();
                     if(apontamentoadd.getSituacaoApontamento() == "APROVADO") {
                         throw new CasoException("Apontamento já aprovado.");
                     } else {
