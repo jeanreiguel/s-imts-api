@@ -20,47 +20,32 @@ import java.util.List;
 
 @AllArgsConstructor
 @Service
-public class AprovacaoApontamentoService {
+public class AprovacaoService {
 
     private AprovacaoRepository aprovacaoRepository;
     private ApontamentosRepository apontamentosRepository;
     private AprovacaoAssembler aprovacaoAssembler;
-    private ApontamentoAssembler apontamentoAssembler;
     private ProjetoRepository projetoRepository;
 
     public AprovacaoDTO aprovarHoras(AprovacaoInputDTO aprovacaoInput) {
 
-        List<Apontamento> aprovados = apontamentoAssembler.toEntityCollection(aprovacaoInput.getApontamentos());
-
-        aprovados.forEach(
-                apontamento -> {
-                    Apontamento apontamentoadd = apontamentosRepository.findById(apontamento.getId())
-                                    .orElseThrow(() -> new CasoException("Apontamento não encontrado."));
-
-                    apontamentoadd.aprovarApontamento();
-                    if(apontamentoadd.getSituacaoApontamento() == "APROVADO") {
-                        throw new CasoException("Apontamento já aprovado.");
-                    } else {
-                        apontamento.setSituacaoApontamento("APROVADO");
-                        apontamento.setHorasTrabalhadas(apontamentoadd.getHorasTrabalhadas());
-                        apontamento.setAlocacao(apontamentoadd.getAlocacao());
-                        apontamento.setData(apontamentoadd.getData());
-                        apontamento.setDescricao(apontamentoadd.getDescricao());
-
-                        Projeto projeto = projetoRepository.findById(
-                                apontamentoadd.getAlocacao().getIdProjeto()
-                                        .getId()) .orElseThrow(() -> new CasoException("Projeto não encontrado."));
-                        projeto.setHorasApontadas(projeto.getHorasApontadas() + apontamento.getHorasTrabalhadas());
-
-                        apontamentosRepository.save(apontamento);
-                    }
-                }
-        );
-
         Aprovacao aprovacao = aprovacaoAssembler.toEntity(aprovacaoInput);
-        aprovacao.setApontamentos(aprovados);
-        aprovacao.setData(LocalDateTime.now());
 
+        aprovacao.getApontamentos().forEach(
+            apontamento -> {
+                apontamento.aprovarApontamento();
+                apontamento.getAlocacao().atualizarHoras(apontamento);
+
+                Projeto projeto = projetoRepository.findById(
+                        apontamento.getAlocacao().getIdProjeto()
+                                .getId()) .orElseThrow(() -> new CasoException("Projeto não encontrado."));
+
+                projeto.atualizarHoras(apontamento);
+
+                apontamentosRepository.save(apontamento);
+                projetoRepository.save(projeto);
+            }
+        );
         aprovacaoRepository.save(aprovacao);
         return aprovacaoAssembler.toModel(aprovacao);
     }

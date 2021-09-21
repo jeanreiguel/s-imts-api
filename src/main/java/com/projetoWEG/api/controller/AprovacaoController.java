@@ -3,7 +3,7 @@ package com.projetoWEG.api.controller;
 import com.projetoWEG.api.model.dto.aprovacao.AprovacaoDTO;
 import com.projetoWEG.api.model.input.AprovacaoInputDTO;
 import com.projetoWEG.domain.repository.ApontamentosRepository;
-import com.projetoWEG.domain.service.AprovacaoApontamentoService;
+import com.projetoWEG.domain.service.AprovacaoService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/aprovacao")
 public class AprovacaoController {
 
-    private AprovacaoApontamentoService aprovacaoApontamentoService;
+    private AprovacaoService aprovacaoApontamentoService;
     private ApontamentosRepository apontamentosRepository;
     @GetMapping
     public List<AprovacaoDTO> listarAprovacoes() {
