@@ -1,5 +1,6 @@
 package com.projetoWEG.domain.model;
 
+import com.projetoWEG.domain.exception.CasoException;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -43,4 +44,11 @@ public class Alocacao {
     @Column(name = "horas_total")
     int horasTotal;
 
+    public void atualizarHoras(Apontamento apontamento) {
+        if(this.getHorasTotal() > apontamento.getHorasTrabalhadas()) {
+            this.setHorasTotal(this.getHorasTotal() - apontamento.getHorasTrabalhadas());
+        } else {
+            throw new CasoException("Horas apontadas ultrapassam o limite");
+        }
+    }
 }

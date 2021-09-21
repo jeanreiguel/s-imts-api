@@ -10,6 +10,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -56,15 +58,22 @@ public class Consultor {
             inverseJoinColumns = @JoinColumn(name = "id_apontamento",referencedColumnName = "id_apontamento"))
     List<Apontamento> apontamentos;
 
-    @ManyToMany
-    @JoinTable(name = "requisicoes",
-            joinColumns = @JoinColumn(name = "requisicao_id_consultor",referencedColumnName = "cadastro_consultor"),
-            inverseJoinColumns = @JoinColumn(name = "requisicao_id",referencedColumnName = "requisicao_id"))
-    List<Requisicao> requisicoes;
+    @OneToMany(mappedBy = "consultor", cascade = CascadeType.ALL)
+    List<Requisicao> requisicoes = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(name = "consultor_alocacao",
             joinColumns = @JoinColumn(name = "id_consultor",referencedColumnName = "cadastro_consultor"),
             inverseJoinColumns = @JoinColumn(name = "id",referencedColumnName = "id"))
     List<Alocacao> alocacoes;
+
+    public Requisicao adicionarRequisicao(Requisicao requisicao) {
+
+        requisicao.setDataRequisicao(LocalDateTime.now());
+        requisicao.setConsultor(this);
+
+        this.requisicoes.add(requisicao);
+
+        return requisicao;
+    }
 }

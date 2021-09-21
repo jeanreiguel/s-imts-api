@@ -16,18 +16,15 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Entity(name = "requisicoes")
+@Entity
 public class Requisicao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "requisicao_id")
     Long id;
 
-    @Valid
-    @JoinColumn(name = "requisicao_id_consultor")
     @ManyToOne
-    Consultor idConsultor;
+    Consultor consultor;
 
     @Valid
     @NotBlank

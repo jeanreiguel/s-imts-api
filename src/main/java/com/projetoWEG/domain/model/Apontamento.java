@@ -1,6 +1,7 @@
 package com.projetoWEG.domain.model;
 
 
+import com.projetoWEG.domain.exception.CasoException;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -45,4 +46,21 @@ public class Apontamento {
 
     @NotNull
     String situacaoApontamento;
+
+    public void aprovarApontamento() {
+
+        if(this.getSituacaoApontamento() == "APROVADO") {
+            throw new CasoException("Apontamento já aprovado.");
+        }
+        this.setSituacaoApontamento("APROVADO");
+    }
+
+    public void reprovarApontamento() {
+
+        if(this.getSituacaoApontamento() == "REPROVADO") {
+            throw new CasoException("Apontamento já reprovado.");
+        }
+        this.setSituacaoApontamento("REPROVADO");
+    }
+
 }

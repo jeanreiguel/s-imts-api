@@ -1,6 +1,7 @@
 package com.projetoWEG.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.projetoWEG.domain.exception.CasoException;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -91,5 +92,24 @@ public class Projeto {
       this.skills.add(skill);
 
       return skill;
+   }
+
+   public void atualizarHoras(Apontamento apontamento) {
+
+      if(this.horasTotal > this.getHorasApontadas() ) {
+         if (apontamento.getSituacaoApontamento() == "APROVADO") {
+            this.setHorasApontadas(this.getHorasApontadas() + apontamento.getHorasTrabalhadas());
+
+            this.getSkills().forEach(
+                 skill -> {
+                    if (apontamento.getAlocacao().getSkill().equals(skill.getNome())) {
+                       skill.setHorasApontadas(skill.getHorasApontadas() + apontamento.getHorasTrabalhadas());
+                    } else {
+                       throw new CasoException("Horas trabalhadas superior ao limite");
+                    }
+                 }
+            );
+         }
+      }
    }
 }
