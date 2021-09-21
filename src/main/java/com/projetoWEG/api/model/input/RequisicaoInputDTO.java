@@ -9,8 +9,6 @@ import lombok.Setter;
 @Setter
 public class RequisicaoInputDTO {
 
-    Long idConsultor;
-
     String nomeResponsavel;
 
     String descricao;
