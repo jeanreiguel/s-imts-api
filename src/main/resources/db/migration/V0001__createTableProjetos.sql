@@ -8,8 +8,7 @@ CREATE TABLE PROJETOS(
     data_fim timestamp,
     horas_apontadas bigint,
     horas_total bigint not null,
-     primary key (id_projeto),
-     foreign key projetos(secao_projeto) references secoes(secao_id)
+     primary key (id_projeto)
 );
 
 INSERT INTO PROJETOS VALUES(
