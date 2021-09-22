@@ -1,6 +1,6 @@
 package com.projetoWEG.api.assembler;
 
-import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
+import com.projetoWEG.api.model.dto.projeto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.model.Projeto;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
