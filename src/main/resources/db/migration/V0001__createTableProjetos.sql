@@ -4,8 +4,8 @@ CREATE TABLE PROJETOS(
     nome_projeto varchar(150) not null,
     descricao_projeto varchar(500) not null,
     status_projeto varchar(45) not null,
-    data_inicio timestamp,
-    data_fim timestamp,
+    data_inicio Date,
+    data_fim Date,
     horas_apontadas bigint,
     horas_total bigint not null,
      primary key (id_projeto)

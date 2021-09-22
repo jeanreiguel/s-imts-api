@@ -10,6 +10,6 @@ public class ProjetoAlocacaoDTO {
 
     private Long idProjeto;
 
-    private Skill idSkill;
+    private Skill skill;
 
 }

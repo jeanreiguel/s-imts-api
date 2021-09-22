@@ -1,8 +1,6 @@
 package com.projetoWEG.api.model.dto;
 
-import com.projetoWEG.api.model.dto.aprovacao.ApontamentoProjetoDTO;
 import com.projetoWEG.api.model.dto.listagem.ProjetoConsultorDTO;
-import com.projetoWEG.domain.model.Apontamento;
 import com.projetoWEG.domain.model.Secao;
 import com.projetoWEG.domain.model.Skill;
 import com.projetoWEG.domain.model.StatusProjeto;
@@ -31,7 +29,7 @@ public class ProjetoFornecedorDTO {
 
     List<ProjetoConsultorDTO> consultores;
 
-    List<ApontamentoProjetoDTO> apontamentos;
+    List<ProjetoApontamentoDTO> apontamentos;
 
     List<Skill> skills;
 
