@@ -1,12 +1,10 @@
 package com.projetoWEG.api.controller;
 
 import com.projetoWEG.api.assembler.ProjetoAssembler;
-import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
-import com.projetoWEG.domain.model.Projeto;
+import com.projetoWEG.api.model.dto.projeto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.model.StatusProjeto;
 import com.projetoWEG.domain.service.ProjetoService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
