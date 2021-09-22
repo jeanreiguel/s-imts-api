@@ -1,6 +1,5 @@
-package com.projetoWEG.api.model.dto;
+package com.projetoWEG.api.model.dto.projeto;
 
-import com.projetoWEG.api.model.dto.ProjetoAlocacaoApontamentoDTO;
 import lombok.Getter;
 import lombok.Setter;
 

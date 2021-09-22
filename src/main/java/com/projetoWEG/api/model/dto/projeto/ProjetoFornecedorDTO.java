@@ -1,4 +1,4 @@
-package com.projetoWEG.api.model.dto;
+package com.projetoWEG.api.model.dto.projeto;
 
 import com.projetoWEG.api.model.dto.listagem.ProjetoConsultorDTO;
 import com.projetoWEG.domain.model.Secao;
@@ -42,6 +42,6 @@ public class ProjetoFornecedorDTO {
 
     int horasApontadas;
 
-   int horasTotal;
+    int horasTotal;
 
 }
