@@ -18,7 +18,7 @@ public class ConsultorDTO {
 
     List<ProjetoConsultorDTO> projetos;
 
-    List<AlocacaoConsultorDTO> alocacoes;
+    List<SkillsConsultorDTO> alocacoes;
 
     UsuarioConsultorDTO usuario;
 
@@ -26,5 +26,4 @@ public class ConsultorDTO {
 
     String status;
 
-    List<RequisicaoDTO> requisicoes;
 }

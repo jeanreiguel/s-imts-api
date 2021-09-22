@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AlocacaoConsultorDTO {
+public class SkillsConsultorDTO {
 
     Skill skill;
 }
