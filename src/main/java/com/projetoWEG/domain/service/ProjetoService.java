@@ -1,7 +1,7 @@
 package com.projetoWEG.domain.service;
 
 import com.projetoWEG.api.assembler.ProjetoAssembler;
-import com.projetoWEG.api.model.dto.ProjetoFornecedorDTO;
+import com.projetoWEG.api.model.dto.projeto.ProjetoFornecedorDTO;
 import com.projetoWEG.domain.exception.CasoException;
 import com.projetoWEG.domain.model.Projeto;
 import com.projetoWEG.domain.model.StatusProjeto;
