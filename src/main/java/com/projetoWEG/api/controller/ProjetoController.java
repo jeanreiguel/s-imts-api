@@ -37,7 +37,7 @@ public class ProjetoController {
 
     @GetMapping("/secao/{secao}")
     public List<ProjetoFornecedorDTO> listarProjetosSecao(@PathVariable String secao) {
-        return projetoAssembler.toFornecedorCollection(projetoService.listarSecao(secao));
+        return projetoService.listarSecao(secao);
     }
 
     @GetMapping("/status/{status}")

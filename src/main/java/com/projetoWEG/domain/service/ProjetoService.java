@@ -30,9 +30,8 @@ public class ProjetoService {
         return projetoAssembler.toFornecedor(projetoRepository.findByNome(nome)
                 .orElseThrow(() -> new CasoException("Projeto não encontrado.")));
     }
-    public List<Projeto> listarSecao(String secao) {
-
-        return projetoRepository.findBySecao(secao);
+    public List<ProjetoFornecedorDTO> listarSecao(String secao) {
+        return projetoAssembler.toFornecedorCollection(projetoRepository.findBySecao_nomeSecao(secao));
     }
     public List<Projeto> listarContaining(String contain) {
         return projetoRepository.findByNomeContaining(contain);
