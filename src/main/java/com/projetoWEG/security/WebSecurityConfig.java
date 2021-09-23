@@ -29,6 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/projetos",
             "/projetos/{id}",
             "/projetos/nome/{nome}",
+            "/projetos/secao/{secao}",
             "/projetos/status/{status}",
             "/projetos/containing/{contain}",
             "/consultores",
@@ -38,7 +39,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/consultores/containing/{contain}",
             "/apontamentos",
             "/apontamentos/{id}",
-            "/aprovacao"
+            "/aprovacao",
+            "/secoes"
     };
 
     @Override

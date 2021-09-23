@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/secao")
+@RequestMapping("/secoes")
 public class SecaoController {
 
     private SecaoService secaoService;
