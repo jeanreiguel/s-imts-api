@@ -18,6 +18,8 @@ public class AprovacaoInputDTO {
 
     private String nomeResponsavel;
 
+    private Long idConsultor;
+
     private int horasAprovadas;
 
     private double valorHora;
