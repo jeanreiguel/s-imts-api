@@ -39,6 +39,12 @@ public class Aprovacao {
 
     @Valid
     @NotNull
+    @JoinColumn(name = "id_consultor")
+    @ManyToOne
+    Consultor idConsultor;
+
+    @Valid
+    @NotNull
     @Column(name = "horas_aprovadas")
     int horasAprovadas;
 

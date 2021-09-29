@@ -34,7 +34,6 @@ public class Alocacao {
     Projeto idProjeto;
 
     @Valid
-    @NotBlank
     @OneToOne
     @JoinColumn(name = "skill_id")
     Skill skill;
@@ -45,7 +44,7 @@ public class Alocacao {
     int horasTotal;
 
     public void atualizarHoras(Apontamento apontamento) {
-        if(this.getHorasTotal() > apontamento.getHorasTrabalhadas()) {
+        if(this.getHorasTotal() >= apontamento.getHorasTrabalhadas()) {
             this.setHorasTotal(this.getHorasTotal() - apontamento.getHorasTrabalhadas());
         } else {
             throw new CasoException("Horas apontadas ultrapassam o limite");

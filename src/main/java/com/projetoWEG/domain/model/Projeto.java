@@ -31,8 +31,6 @@ public class Projeto {
    Long id;
 
    @Valid
-   @NotBlank
-   @Size(max = 255)
    @JoinColumn(name = "secao_projeto")
    @ManyToOne
    Secao secao;
@@ -102,10 +100,12 @@ public class Projeto {
 
             this.getSkills().forEach(
                  skill -> {
-                    if (apontamento.getAlocacao().getSkill().equals(skill.getNome())) {
+                    System.out.println(apontamento.getAlocacao().getSkill().getNome());
+
+                    if (apontamento.getAlocacao().getSkill().getNome().equals(skill.getNome())) {
                        skill.setHorasApontadas(skill.getHorasApontadas() + apontamento.getHorasTrabalhadas());
                     } else {
-                       throw new CasoException("Horas trabalhadas superior ao limite");
+                       throw new CasoException("Skill nao encontrada");
                     }
                  }
             );
