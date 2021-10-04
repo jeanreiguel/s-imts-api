@@ -2,6 +2,7 @@ package com.projetoWEG.api.controller;
 
 import com.projetoWEG.api.assembler.ProjetoAssembler;
 import com.projetoWEG.api.model.dto.projeto.ProjetoFornecedorDTO;
+import com.projetoWEG.domain.model.Secao;
 import com.projetoWEG.domain.model.StatusProjeto;
 import com.projetoWEG.domain.service.ProjetoService;
 import lombok.AllArgsConstructor;
@@ -42,11 +43,15 @@ public class ProjetoController {
 
     @GetMapping("/status/{status}")
     public List<ProjetoFornecedorDTO> listarProjetosStatus(@PathVariable StatusProjeto status) {
-        return projetoAssembler.toFornecedorCollection(projetoService.listarStatus(status));
+        return projetoService.listarStatus(status);
+    }
+    @GetMapping("/{secaoNome}/{status}")
+    public List<ProjetoFornecedorDTO> listarProjetosStatusSecao(@PathVariable String secaoNome, StatusProjeto status) {
+        return projetoService.listarSecaoStatus(secaoNome,status);
     }
 
     @GetMapping("/nome/containing/{contain}")
     public List<ProjetoFornecedorDTO> listarProjetosContaining(@PathVariable String contain) {
-        return projetoAssembler.toFornecedorCollection(projetoService.listarContaining(contain));
+        return projetoService.listarContaining(contain);
     }
 }

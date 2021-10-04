@@ -18,6 +18,7 @@ public class ConsultorController {
     public List<ConsultorDTO> listarConsultores() {
         return consultorService.listarTodos();
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<ConsultorDTO>  listarConsultorId(@PathVariable Long id) {
         return consultorService.listarId(id);
