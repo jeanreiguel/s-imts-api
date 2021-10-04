@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -23,6 +24,8 @@ public class ConsultorDTO {
     UsuarioConsultorDTO usuario;
 
     Long limiteHoras;
+
+    BigDecimal valorHoras;
 
     String status;
 

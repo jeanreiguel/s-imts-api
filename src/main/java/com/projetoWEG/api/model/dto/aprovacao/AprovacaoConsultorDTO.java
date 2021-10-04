@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -16,5 +17,7 @@ public class AprovacaoConsultorDTO {
     @Column(name = "skill_consultor")
     Skill skill;
 
-    int limite_horas;
+    int limiteHoras;
+
+    BigDecimal valorHoras;
 }
