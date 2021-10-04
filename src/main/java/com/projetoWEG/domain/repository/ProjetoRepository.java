@@ -13,7 +13,8 @@ public interface ProjetoRepository extends JpaRepository<Projeto, Long> {
 
     Optional<Projeto> findById(Long id);
     Optional<Projeto> findByNome(String name);
-    List<Projeto> findBySecao_nomeSecao(String secao);
+    List<Projeto> findBySecao_nomeSecao(String secaoNome);
+    List<Projeto> findByStatusAndSecao_nomeSecao(StatusProjeto status, String secaoNome);
     List<Projeto> findByStatus(StatusProjeto status);
     List<Projeto> findByNomeContaining(String contain);
 }

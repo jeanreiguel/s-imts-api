@@ -30,14 +30,18 @@ public class ProjetoService {
         return projetoAssembler.toFornecedor(projetoRepository.findByNome(nome)
                 .orElseThrow(() -> new CasoException("Projeto não encontrado.")));
     }
-    public List<ProjetoFornecedorDTO> listarSecao(String secao) {
-        return projetoAssembler.toFornecedorCollection(projetoRepository.findBySecao_nomeSecao(secao));
-    }
-    public List<Projeto> listarContaining(String contain) {
-        return projetoRepository.findByNomeContaining(contain);
+    public List<ProjetoFornecedorDTO> listarSecao(String secaoNome) {
+        return projetoAssembler.toFornecedorCollection(projetoRepository.findBySecao_nomeSecao(secaoNome));
     }
 
-    public List<Projeto> listarStatus(StatusProjeto status) {
-        return projetoRepository.findByStatus(status);
+    public List<ProjetoFornecedorDTO> listarSecaoStatus(String secaoNome, StatusProjeto statusProjeto) {
+        return projetoAssembler.toFornecedorCollection(projetoRepository.findByStatusAndSecao_nomeSecao(statusProjeto, secaoNome));
+    }
+    public List<ProjetoFornecedorDTO> listarContaining(String contain) {
+        return projetoAssembler.toFornecedorCollection(projetoRepository.findByNomeContaining(contain));
+    }
+
+    public List<ProjetoFornecedorDTO> listarStatus(StatusProjeto status) {
+        return projetoAssembler.toFornecedorCollection(projetoRepository.findByStatus(status));
     }
 }
