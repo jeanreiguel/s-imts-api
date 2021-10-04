@@ -10,6 +10,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +43,11 @@ public class Consultor {
     @Size(min = 1, max = 4)
     @Column(name = "limite_horas")
     Long limiteHoras;
+
+    @Valid
+    @NotNull
+    @Column(name = "valor_horas")
+    BigDecimal valorHoras;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     String status;
