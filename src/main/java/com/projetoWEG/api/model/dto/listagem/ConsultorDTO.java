@@ -1,5 +1,7 @@
 package com.projetoWEG.api.model.dto.listagem;
 
+import com.projetoWEG.api.model.dto.aprovacao.ApontamentoConsultorDTO;
+import com.projetoWEG.domain.model.Apontamento;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +22,8 @@ public class ConsultorDTO {
     List<ProjetoConsultorDTO> projetos;
 
     List<SkillsConsultorDTO> alocacoes;
+
+    List<ApontamentoConsultorDTO> apontamentos;
 
     UsuarioConsultorDTO usuario;
 

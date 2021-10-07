@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
+import java.util.List;
 
 @Getter
 @Setter
@@ -13,4 +14,6 @@ public class AprovacaoAlocacaoConsultorDTO {
     String nome;
 
     int limite_horas;
+
+    List<ApontamentoConsultorDTO> apontamentos;
 }
