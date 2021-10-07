@@ -41,6 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             "/apontamentos",
             "/apontamentos/{id}",
             "/aprovacao",
+            "/aprovacao/inserir",
             "/secoes"
     };
 
