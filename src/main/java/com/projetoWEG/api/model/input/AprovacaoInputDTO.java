@@ -20,6 +20,8 @@ public class AprovacaoInputDTO {
 
     private Long idConsultor;
 
+    private Date data;
+
     private int horasAprovadas;
 
     private double valorHora;

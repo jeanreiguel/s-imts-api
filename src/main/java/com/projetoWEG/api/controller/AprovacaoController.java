@@ -15,7 +15,7 @@ import java.util.List;
 public class AprovacaoController {
 
     private AprovacaoService aprovacaoApontamentoService;
-    private ApontamentosRepository apontamentosRepository;
+
     @GetMapping
     public List<AprovacaoDTO> listarAprovacoes() {
         return aprovacaoApontamentoService.listarAprovacoes();
